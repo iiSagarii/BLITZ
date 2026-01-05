@@ -1,0 +1,25 @@
+{
+  "Array-1": [
+    {
+      "SFR": "FTP_ITC.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE supports SSHv2 for trusted channel implementation to syslog server. Additionally, the TOE implements the MACsec protocol for the protection of layer 2 communications between itself and authenticated MACsec peers. The TOE provides trusted channels using SSHv2 protocol which ensures the confidentiality and integrity of communication with the remote audit server (syslog server). The TOE acts as an SSH client while initiating a connection with the configured syslog server."
+    },
+    {
+      "SFR": "FTP_ITC.1",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The SSHv2 protocol ensures that the data transmitted over a SSH session cannot be disclosed or altered by using the encryption and integrity mechanisms of the protocol with the FIPS cryptographic module."
+    },
+    {
+      "SFR": "FTP_ITC.1/MACSEC",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE implements the MACsec protocol for the protection of layer 2 communications between itself and authenticated MACsec peers."
+    },
+    {
+      "SFR": "FTP_TRP.1/Admin",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE supports remote administration using SSH. A trusted path is provided by the TOE using SSHv2 protocol between itself and remote administrators so that the contents of administrative sessions are protected against unauthorized disclosure or modification. Remote administrators can initiate communication to the TOE’s CLI through the SSH tunnel created by the SSH session. Assured identification is guaranteed by using password or public key-based authentication mechanisms. The SSHv2 protocol ensures that the data transmitted over a SSH session cannot be disclosed or altered by using the encryption and integrity mechanisms of the protocol with the FIPS cryptographic module."
+    },
+    {
+      "SFR": "FTP_TRP.1/Admin",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The SSHv2 protocol ensures that the data transmitted over a SSH session cannot be disclosed or altered by using the encryption and integrity mechanisms of the protocol with the FIPS cryptographic module."
+    }
+  ],
+  "Excel": []
+}

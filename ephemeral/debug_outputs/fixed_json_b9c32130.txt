@@ -1,0 +1,21 @@
+{
+  "DOC": [
+    {
+      "SFR": "FAU_GEN.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: Following cryptographic key operations with a unique key reference/identifier: Generation of a CSR and associated keypair Importing or deleting a certificate",
+      "Ans#2": "The TOE is not a distributed TOE; hence this assurance activity is not applicable.",
+      "Ans#3": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FAU_GEN.2",
+      "Ans#1": "The TSS and Guidance Documentation requirements for FAU_GEN.2 are already covered by the TSS and Guidance Documentation requirements for FAU_GEN.1."
+    },
+    {
+      "SFR": "FAU_STG.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE maintains three separate log files locally, namely Events, User Access, and Admin Access. By default, the TSF allocates 200 MB to each log file, but the administrator can configure the file size for each log file up to a maximum of 1024 MB for hardware platforms and 200 MB for virtual platforms.",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The administrator is provided with specific options within the GUI to clear audit logs or modify audit settings. These actions require the administrator to be positively identified and authenticated.",
+      "Ans#3": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    }
+  ],
+  "Excel": []
+}

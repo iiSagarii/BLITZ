@@ -1,0 +1,24 @@
+{
+  "DOC": [
+    {
+      "SFR": "FMT_MOF.1/ManualUpdate",
+      "Ans#1": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FMT_MTD.1/CoreData",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The only functions accessible prior to authentication are the display of the configurable warning and consent banner and the automated response to ICMP echo messages with ICMP echo reply messages. The administrative interfaces provided by the TSF do not allow any of the functions to be accessed by unauthenticated or unauthorized users.",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The TOE provides a trust store to store certificates. The permissions on the trust store restrict access so that only Security Administrators can import or delete certificates from the trust store. Security Administrators can also view the certificates stored in the trust store. No other access to the trust store is allowed."
+    },
+    {
+      "SFR": "FMT_MTD.1/CryptoKeys",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The TOE restricts the ability to manage TLS (session keys), and any configured X.509 certificates (public and private key pairs) to security administrators via GUI."
+    }
+  ],
+  "Excel": [
+    {
+      "SFR": "FMT_MTD.1/CryptoKeys",
+      "TSS-requirement": "For non-distributed TOEs, the evaluator shall ensure the TSS lists the keys the Security Administrator is able to manage to include the options available (e.g. generating keys, importing keys, modifying keys or deleting keys) and how that how those operations are performed.",
+      "Missing information": "The TSS text does not specify the exact operations (e.g., generating, importing, modifying, or deleting keys) that Security Administrators can perform on TLS session keys and X.509 certificates."
+    }
+  ]
+}

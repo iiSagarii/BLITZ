@@ -1,0 +1,53 @@
+Here is the JSON-formatted output as per the requirements:
+
+```json
+[
+  {
+    "DOC": [
+      {
+        "SFR": "FMT_MOF.1/ManualUpdate",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: For distributed TOEs see Section 5.1.4.1. [CPP_ND_V3.0E-SD]. There are no specific requirements for non-distributed TOEs."
+      }
+    ]
+  },
+  {
+    "DOC": [
+      {
+        "SFR": "FMT_MTD.1/CoreData",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The only functions accessible prior to authentication are the display of the configurable warning and consent banner and the automated response to ICMP echo messages with ICMP echo reply messages. No management of TSF data can be performed through any interface prior to login. Only administrators can login to the administrative interface, ensuring that access to TSF data is disallowed for non-administrative users."
+      },
+      {
+        "SFR": "FMT_MTD.1/CoreData",
+        "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The TOE provides a trust store to handle the X.509v3 certificates. The permissions on the trust store restrict access so that only Security Administrator users can import or delete certificates from the trust store. Security Administrator users can also view the certificates stored in the trust store. Non Security Administrator users can only view the certificates but cannot import or delete them."
+      }
+    ]
+  },
+  {
+    "DOC": [
+      {
+        "SFR": "FMT_MTD.1/CryptoKeys",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: For distributed TOEs see Section 2.4.1.1."
+      },
+      {
+        "SFR": "FMT_MTD.1/CryptoKeys",
+        "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The Security Administrator can generate and delete the cryptographic keys associated with CSRs as follows: For Client Authentication certificates, the administrator navigates to System > Configuration > Certificates > Client Auth Certificates, where options are available to generate a CSR and delete an existing CSR. These actions respectively generate or delete the associated cryptographic key pair. For Device certificates, the administrator navigates to System > Configuration > Certificates > Device Certificates, where similar options exist to generate or delete a CSR, with the corresponding generation or deletion of the associated cryptographic keys."
+      }
+    ]
+  }
+]
+```
+
+```json
+[
+  {
+    "SFR": "FMT_MTD.1/CoreData",
+    "TSS-requirement": "For each administrative function identified in the guidance documentation that is accessible through an interface prior to administrator log-in, the evaluator shall confirm that the TSS details how the ability to manipulate the TSF data through these interfaces is disallowed for non-administrative users.",
+    "Missing Information": "The TSS text for FMT_MTD.1/CoreData does not explicitly mention the specific administrative functions accessible prior to authentication."
+  },
+  {
+    "SFR": "FMT_MTD.1/CryptoKeys",
+    "TSS-requirement": "For non-distributed TOEs, the evaluator shall ensure the TSS lists the keys the Security Administrator is able to manage to include the options available (e.g. generating keys, importing keys, modifying keys or deleting keys) and how that how those operations are performed.",
+    "Missing Information": "The TSS text for FMT_MTD.1/CryptoKeys does not detail how the operations (e.g., generating, importing, modifying, or deleting keys) are performed."
+  }
+]
+```

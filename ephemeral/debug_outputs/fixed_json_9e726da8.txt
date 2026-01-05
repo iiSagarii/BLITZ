@@ -1,0 +1,27 @@
+[
+  {
+    "DOC": [
+      {
+        "SFR": "FIA_X509_EXT.2",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF uses the certificate presented by the Syslog server to verify the server’s identity. The TSF establishes reference identifiers for the remote server as follows: When the server is specified using a domain name, the TSF verifies that the domain name matches a Subject Alternative Name DNS Name field in the certificate using exact or wildcard matching specified in Section 3.1 of RFC 2818. If the certificate does not contain any Subject Alternative Name fields, the TSF matches the domain name against the Common Name in the certificate. When the server is specified using an IP address, the TSF verifies that the IP address exactly matches a Subject Alternative Name IP Address field in the certificate using the rules specified in Section 3.1 of RFC 2818. If the certificate does not contain any Subject Alternative Name fields, the TSF matches the IP address against the Common Name in the certificate. Once the TSF has verified that the certificate identifiers are valid for the Syslog server, the TSF verifies the validity of the certificate as described in FIA_X509_EXT.1/Rev. The TSF presents its own certificate to the Syslog server. This certificate is configured specifically for authentication to the Syslog server by the Security Administrator. Additionally, the TSF presents its device certificate when a remote user connects to the TOE via the web GUI."
+      },
+      {
+        "SFR": "FIA_X509_EXT.2",
+        "Ans#2": "Upon investigation, the evaluator found that the TSS states that: If the TSF cannot contact the CRL server or the server does not respond, the TSF logs the failure and considers the certificate valid. If any of the other FIA_X509_EXT.1/Rev validity checks fail, the TSF rejects the certificate and does not establish the connection."
+      },
+      {
+        "SFR": "FIA_X509_EXT.2",
+        "Ans#3": "Upon investigation, the evaluator found that the TSS states that: The TSF restricts the ability to modify the behavior of audit-related functions to Security Administrators. For the transmission of audit data to an external IT entity, Security Administrators can configure the destination address, TLS protocol, and source port for communication with an external syslog server. Audit forwarding is automatically enabled when this configuration is present and automatically disabled when the configuration is removed; there is no separate control to explicitly enable or disable the feature. With respect to the handling of audit data, Security Administrators have control over local audit management functions, including the ability to clear existing logs and configure the maximum log size. When the local audit storage space becomes full, the TOE automatically overwrites the oldest audit records. This log overwrite behavior is fixed and cannot be configured by the Security Administrator."
+      }
+    ]
+  },
+  {
+    "Excel": [
+      {
+        "SFR": "FIA_X509_EXT.3",
+        "TSS-requirement": "The evaluator shall verify that any distinctions between trusted channels are described. If the requirement that the administrator is able to specify the default action, then the evaluator shall ensure that the guidance documentation contains instructions on how this configuration action is performed.",
+        "Missing Information": "The TSF shall describe how the TOE chooses which certificates to use and any necessary instructions for configuring the operating environment so that the TOE can use the certificates. Additionally, the TSF shall describe any distinctions between trusted channels and provide instructions for configuring default actions if applicable."
+      }
+    ]
+  }
+]

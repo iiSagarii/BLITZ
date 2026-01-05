@@ -1,0 +1,33 @@
+{
+  "DOC": [
+    {
+      "SFR": "FAU_GEN.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: Public keys associated with certificates are identified by the certificate CN and the term key size."
+    },
+    {
+      "SFR": "FAU_GEN.1",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FAU_GEN.1",
+      "Ans#3": "Upon investigation, the evaluator found that the TSS states that: The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FAU_GEN.2",
+      "Ans#1": "The TSS and Guidance Documentation requirements for FAU_GEN.2 are already covered by the TSS and Guidance Documentation requirements for FAU_GEN.1."
+    },
+    {
+      "SFR": "FAU_STG.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF protects audit data from unauthorized modification and deletion through the restrictive administrative interfaces. While the file system is not directly exposed to the administrative user via the HTTPS GUI or local CLI, the administrator is provided with specific options within the GUI to clear audit logs or modify audit settings. These actions require the administrator to be positively identified and authenticated."
+    },
+    {
+      "SFR": "FAU_STG.1",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: These actions require the administrator to be positively identified and authenticated."
+    },
+    {
+      "SFR": "FAU_STG.1",
+      "Ans#3": "Upon investigation, the evaluator found that the TSS states that: The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    }
+  ],
+  "Excel": []
+}

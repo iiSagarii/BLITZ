@@ -1,0 +1,45 @@
+```json
+[
+  {
+    "DOC": [
+      {
+        "SFR": "FTP_ITC.1",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE supports SSHv2 for trusted channel implementation to syslog server. Additionally, the TOE implements the MACsec protocol for the protection of layer 2 communications between itself and authenticated MACsec peers. The TOE provides trusted channels using SSHv2 protocol which ensures the confidentiality and integrity of communication with the remote audit server (syslog server). The TOE acts as an SSH client while initiating a connection with the configured syslog server."
+      },
+      {
+        "SFR": "FTP_ITC.1",
+        "Ans#2": "This requirement is not being satisfied. The TSS text does not explicitly mention the cryptographic protocol Security Functional Requirements listed in the ST. It is recommended to include: The SSHv2 protocol ensures that the data transmitted over a SSH session cannot be disclosed or altered by using the encryption and integrity mechanisms of the protocol with the FIPS cryptographic module."
+      },
+      {
+        "SFR": "FTP_ITC.1/MACSEC",
+        "Ans#1": "This requirement is not being satisfied. No description found in the TSS text for FTP_ITC.1/MACSEC."
+      },
+      {
+        "SFR": "FTP_TRP.1/Admin",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE supports remote administration using SSH. A trusted path is provided by the TOE using SSHv2 protocol between itself and remote administrators so that the contents of administrative sessions are protected against unauthorized disclosure or modification. Remote administrators can initiate communication to the TOE’s CLI through the SSH tunnel created by the SSH session. Assured identification is guaranteed by using password or public key-based authentication mechanisms. The SSHv2 protocol ensures that the data transmitted over a SSH session cannot be disclosed or altered by using the encryption and integrity mechanisms of the protocol with the FIPS cryptographic module."
+      },
+      {
+        "SFR": "FTP_TRP.1/Admin",
+        "Ans#2": "This requirement is not being satisfied. The TSS text does not explicitly confirm that all protocols listed in the TSS in support of TOE administration are consistent with those specified in the requirement, and are included in the requirements in the ST. It is recommended to include: The SSHv2 protocol ensures that the data transmitted over a SSH session cannot be disclosed or altered by using the encryption and integrity mechanisms of the protocol with the FIPS cryptographic module."
+      }
+    ],
+    "Excel": [
+      {
+        "SFR": "FTP_ITC.1",
+        "TSS-requirement": "The evaluator shall also confirm that all secure communication mechanisms are described in sufficient detail to allow the evaluator to match them to the cryptographic protocol Security Functional Requirements listed in the ST.",
+        "Missing Information": "The TSS text does not explicitly mention the cryptographic protocol Security Functional Requirements listed in the ST."
+      },
+      {
+        "SFR": "FTP_ITC.1/MACSEC",
+        "TSS-requirement": "The evaluator shall examine the TSS to determine that, for all communications with authorized IT entities identified in the requirement, each secure communication mechanism is identified in terms of the allowed protocols for that IT entity, whether the TOE acts as a server or a client, and the method of assured identification of the non-TSF endpoint.",
+        "Missing Information": "No description found in the TSS text for FTP_ITC.1/MACSEC."
+      },
+      {
+        "SFR": "FTP_TRP.1/Admin",
+        "TSS-requirement": "The evaluator shall also confirm that all protocols listed in the TSS in support of TOE administration are consistent with those specified in the requirement, and are included in the requirements in the ST.",
+        "Missing Information": "The TSS text does not explicitly confirm that all protocols listed in the TSS in support of TOE administration are consistent with those specified in the requirement, and are included in the requirements in the ST."
+      }
+    ]
+  }
+]
+```

@@ -1,0 +1,17 @@
+{
+  "DOC": [
+    {
+      "SFR": "FCS_COP.1/KeyedHash",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: TLSv1.2 and TLSv1.3: Master Secret Derivation: HMAC-SHA256: Key sizes of 128 bits (ECDH P-256) or 192 bits (RSA, ECDH P-384), block size 512 bits, output length 256 bits. HMAC-SHA384: Key sizes of 256 bits (ECDH P-256) or 384 bits (RSA, ECDH P-384), block size 1024 bits, output length 384 bits. Key Block Derivation: HMAC-SHA256: Key size 384 bits, block size 512 bits, output length 256 bits. HMAC-SHA384: Key size 384 bits, block size 1024 bits, output length 384 bits. Message Authentication: HMAC-SHA1: Key size 160 bits, block size 512 bits, output length 160 bits."
+    },
+    {
+      "SFR": "FCS_COP.1/SigGen",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE supports signature generation and verification with RSA 2048 bit, 3072 bit and 4096 bit with SHA-1/256/384/512 in accordance with FIPS PUB 186-4 and ECDSA with NIST curves P-256, P-384 and P-521 keys with SHA-1/256/384/512 in accordance with FIPS PUB 196-4."
+    },
+    {
+      "SFR": "FCS_HTTPS_EXT.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF implements the server and client sides of the HTTPs protocol according to RFC 2818 by using a TLS session to secure the HTTP session. All MUST and REQUIRED statement within RFC 2818 are followed. The TSF supports TLSv1.2 and TLSv1.3 for HTTPs/TLS. If the TSF receives a ClientHello message that requests TLSv1.1 or earlier, the TSF sends a fatal handshake_failure message and terminates the connection."
+    }
+  ],
+  "Excel": []
+}

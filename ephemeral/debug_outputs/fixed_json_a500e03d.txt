@@ -1,0 +1,48 @@
+{
+  "DOC": [
+    {
+      "SFR": "FCS_RBG_EXT.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE implements a DRBG in accordance with ISO/IEC 18031:2011 using a CTR DRBG with AES-256. The TSF seeds the CTR_DRBG using 256-bits of data that contains at least 256 bits of entropy. The TSF gathers and pools entropy from 3 software based noise sources."
+    },
+    {
+      "SFR": "FCS_TLSC_EXT.1.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF supports and proposes the following cipher suites in the ClientHello message, grouped by TLS version: TLS 1.2 Cipher Suites: TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384. TLS 1.3 Cipher Suites: TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384.",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The TSF supports and proposes the following cipher suites in the ClientHello message, grouped by TLS version: TLS 1.2 Cipher Suites: TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384. TLS 1.3 Cipher Suites: TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384."
+    },
+    {
+      "SFR": "FCS_TLSC_EXT.1.2",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF establishes reference identifiers for the remote server as follows: When the server is specified using a domain name, as per RFC 6125 Section, the TSF verifies that the domain name matches a Subject Alternative Name DNS Name field in the certificate using exact or wildcard matching specified in Section 3.1 of RFC 2818. If the certificate does not contain any Subject Alternative Name fields, the TSF matches the domain name against the Common Name in the certificate. When the server is specified using an IP address, the TSF verifies that the IP address exactly matches a Subject Alterative Name IP Address field in the certificate using the rules specified in Section 3.1 of RFC 2818. If the certificate does not contain any Subject Alternative Name fields, the TSF matches the IP address against the Common Name in the certificate.",
+      "Ans#2": "The TOE is not a distributed TOE; hence this assurance activity is not applicable.",
+      "Ans#3": "Upon investigation, the evaluator found that the TSS states that: When the reference identifier is an IP address, the TOE converts it to a binary representation in network byte order. For IPv4 addresses, the TOE enforces the canonical dotted-decimal format as defined in RFC 3986, before conversion to binary. The TOE compares the binary IP address against all the IP Address entries in the Subject Alternative Name.",
+      "Ans#4": "Upon investigation, the evaluator found that the TSS states that: For IPv4 addresses, the TOE enforces the canonical dotted-decimal format as defined in RFC 3986, before conversion to binary."
+    },
+    {
+      "SFR": "FCS_TLSC_EXT.1.4",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF supports the following Supported Groups in the ClientHello message: secp256r1, secp384r1, secp521r1. The TOE automatically sends the Supported Groups extension when an ECDHE ciphersuite is selected, and this behavior does not require administrator intervention."
+    },
+    {
+      "SFR": "FCS_TLSC_EXT.1.5",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF supports the signature_algorithms_extension as defined in TLS 1.2 and later versions. The extension is included in the ClientHello message with the following set of signature algorithms: rsa_pkcs1 with sha256, rsa_pkcs1with sha384, rsa_pkcs1 with sha512, ecdsa_secp256r1 with sha256, ecdsa_secp384r1 with sha384, ecdsa_secp521r1 with sha512. The device presents the signature_algorithms extension in the ClientHello message by default and it cannot be configured.",
+      "Ans#2": "This requirement is not being satisfied. FCS_TLSC_EXT.1.5: The TSS should describe the signature_algorithms_cert extension and whether the required behavior is performed by default or may be configured."
+    },
+    {
+      "SFR": "FCS_TLSC_EXT.1.6",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The Security Administrator can configure the TSF to support TLS v1.2, TLS v1.3 or both for both the TSF TLS client and server. The Security Administrator can enable and disable individual ciphersuites as well as specify the preferred ordering of ciphersuites."
+    },
+    {
+      "SFR": "FCS_TLSC_EXT.1.8",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE does not support the use of Pre-Shared Keys (PSKs) in TLSv1.3, making out-of-band provisioning of PSKs not possible in the evaluated configuration."
+    },
+    {
+      "SFR": "FCS_TLSC_EXT.2.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF supports TLS with mutual authentication using X509v3 certificates to secure communications with the Syslog server. When the Syslog server sends the Certificate Request message, the TSF replies with a Client Certificate message. The Client Certificate message includes the certificate that the Security Administrator configured to authenticate to the Syslog server."
+    }
+  ],
+  "Excel": [
+    {
+      "SFR": "FCS_TLSC_EXT.1.5",
+      "TSS-requirement": "The evaluator shall verify that TSS describes the signature_algorithms_cert extension and whether the required behavior is performed by default or may be configured.",
+      "Missing information": "FCS_TLSC_EXT.1.5: The TSS should describe the signature_algorithms_cert extension and whether the required behavior is performed by default or may be configured."
+    }
+  ]
+}

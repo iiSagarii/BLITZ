@@ -1,0 +1,57 @@
+{
+  "DOC": [
+    {
+      "SFR": "FAU_STG_EXT.1",
+      "Ans#1": "The TSF implements Syslog over TLS using either TLS v1.2 or TLS v1.3. The TSF supports TLS with mutual authentication using X509v3 certificates to secure communications with the Syslog server. Logs are sent to the Syslog servers in real-time."
+    },
+    {
+      "SFR": "FAU_STG_EXT.1",
+      "Ans#2": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FAU_STG_EXT.1",
+      "Ans#3": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FAU_STG_EXT.1",
+      "Ans#4": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FAU_STG_EXT.1",
+      "Ans#5": "Logs are sent to the Syslog servers in real-time."
+    },
+    {
+      "SFR": "FAU_STG_EXT.1",
+      "Ans#6": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FAU_STG_EXT.1",
+      "Ans#7": "The TSF protects audit data from unauthorized modification and deletion through the restrictive administrative interfaces. The logs are stored in a persistent format, ensuring that audit records are preserved across reboots or power cycles."
+    },
+    {
+      "SFR": "FAU_STG_EXT.1",
+      "Ans#8": "The TSF implements local logging by maintaining log files of audit records. The logs are stored in a persistent format."
+    },
+    {
+      "SFR": "FAU_STG_EXT.1",
+      "Ans#9": "The administrator is provided with specific options within the GUI to clear audit logs or modify audit settings. These actions require the administrator to be positively identified and authenticated."
+    },
+    {
+      "SFR": "FAU_STG_EXT.1",
+      "Ans#10": "When this file first reaches its capacity, the TSF creates an inactive log file, moves the existing audit records into it, and continues writing new logs to a refreshed active file. From that point on, whenever the active file reaches capacity, its contents are pushed to the inactive file, overwriting its previous contents, and the active file is refreshed to store new audit logs."
+    },
+    {
+      "SFR": "FAU_STG_EXT.1",
+      "Ans#11": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FCS_CKM.1",
+      "Ans#1": "The TSF supports the generation of RSA 2048 bit, 3072 bit, 4096 bit keys for TLS client authentication, TLS server authentication, and RSA key establishment. The TSF generates ECDSA P-256, P-384 and P-521 keys for TLS client authentication, TLS server authentication, and TLS ECDHE key establishment."
+    },
+    {
+      "SFR": "FCS_CKM.2",
+      "Ans#1": "The TSF uses both elliptic curve-based and RSA-based key establishment in support of TLS. When the TOE is configured with a server certificate containing an RSA key, the TSF acts as the TLS server and employs RSA-based key establishment (RSAES-PKCS1-v1_5). When configured with a server certificate containing an ECDSA key, the TSF acts as the TLS server and utilizes the elliptic curve-based establishment scheme aligned with NIST SP 800-56A Rev. 3."
+    }
+  ],
+  "Excel": []
+}

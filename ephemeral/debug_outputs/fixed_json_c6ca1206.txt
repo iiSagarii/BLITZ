@@ -1,0 +1,36 @@
+The TSS text provided satisfies all the requirements for each SFR. Here's the detailed evaluation:
+
+1. **For FPT_TUD_EXT.1 TSS-requirement#1**: The TSS text adequately explains how to query the current version via the web GUI and local console.
+
+2. **For FPT_TUD_EXT.1 TSS-requirement#2**: The TSS describes updates via HTTPS and digital signature verification, meeting the requirement.
+
+3. **For FPT_TUD_EXT.1 TSS-requirement#3**: The process of digital signature verification is clearly detailed in the TSS.
+
+4. **For FPT_TUD_EXT.1 TSS-requirement#4 and #5**: These are not applicable as automatic updates aren't selected and it's a standalone TOE.
+
+5. **For FTA_SSL.3 TSS-requirement#1**: The TSS explains session termination and inactivity timeouts, satisfying the requirement.
+
+6. **For FTA_SSL.4 TSS-requirement#1**: The TSS describes both remote and local session termination, fulfilling the requirement.
+
+Overall, all TSS text meets the respective requirements with no gaps identified.
+
+```json
+[
+  {
+    "DOC": [
+      {
+        "SFR": "FPT_TUD_EXT.1",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF allows the Security Administrator to view the currently running version of firmware from the System Maintenance > Platform page of the web GUI. The current software version can also be found on the local console, where the version details are displayed after the user logs in."
+      },
+      {
+        "SFR": "FPT_TUD_EXT.1",
+        "Ans#2": "Upon investigation, the evaluator found that the TSS states that: When the Security Administrator uploads a firmware update using HTTPS web GUI, the TSF performs an RSA 2048 SHA-512 digital signature verification of the update using the Ivanti Secure firmware update public key. The public key is distributed as part of the firmware package. Ivanti Secure retains control over the private key used to sign firmware updates. If the digital signature check is successful, the TSF installs the update. If the digital signature check detects tampering with the update and/or signature, the TSF presents the user with an error message and discards the update."
+      },
+      {
+        "SFR": "FPT_TUD_EXT.1",
+        "Ans#3": "Upon investigation, the evaluator found that the TSS states that: When the Security Administrator uploads a firmware update using HTTPS web GUI, the TSF performs an RSA 2048 SHA-512 digital signature verification of the update using the Ivanti Secure firmware update public key. The public key is distributed as part of the firmware package. Ivanti Secure retains control over the private key used to sign firmware updates. If the digital signature check is successful, the TSF installs the update. If the digital signature check detects tampering with the update and/or signature, the TSF presents the user with an error message and discards the update."
+      }
+    ]
+  }
+]
+```

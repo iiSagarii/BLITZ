@@ -1,0 +1,25 @@
+{
+  "DOC": [
+    {
+      "SFR": "FMT_MOF.1/ManualUpdate",
+      "Ans#1": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FMT_MTD.1/CoreData",
+      "Ans#1": "The only functions accessible prior to authentication are the display of the configurable warning and consent banner and the automated response to ICMP echo messages with ICMP echo reply messages. No management of TSF data can be performed through any interface prior to login. Only administrators may login to the administrative interface, ensuring that access to TSF data is disallowed for non-administrative users.",
+      "Ans#2": "The TOE provides a trust store to store certificates. The permissions on the trust store restrict access so that only Security Administrators can import or delete certificates from the trust store. Security Administrators can also view the certificates stored in the trust store. No other access to the trust store is allowed."
+    },
+    {
+      "SFR": "FMT_MTD.1/CryptoKeys",
+      "Ans#1": "The TOE is not a distributed TOE; hence this assurance activity is not applicable.",
+      "Ans#2": "This requirement is not being satisfied. The TSS text for FMT_MTD.1/CryptoKeys does not list the keys the Security Administrator is able to manage (e.g., generating keys, importing keys, modifying keys or deleting keys) and how those operations are performed."
+    }
+  ],
+  "Excel": [
+    {
+      "SFR name": "FMT_MTD.1/CryptoKeys",
+      "TSS-requirement": "For non-distributed TOEs, the evaluator shall ensure the TSS lists the keys the Security Administrator is able to manage to include the options available (e.g. generating keys, importing keys, modifying keys or deleting keys) and how that how those operations are performed.",
+      "Missing information in TSS text": "The TSS text for FMT_MTD.1/CryptoKeys does not list the keys the Security Administrator is able to manage (e.g., generating keys, importing keys, modifying keys or deleting keys) and how those operations are performed."
+    }
+  ]
+}

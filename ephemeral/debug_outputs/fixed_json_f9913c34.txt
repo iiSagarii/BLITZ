@@ -1,0 +1,37 @@
+[
+    {
+        "Array-1": [
+            {
+                "SFR": "FTA_SSL.4",
+                "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The administrative user can logout from the TOE using CLI by typing 'logout' to terminate the session. The TOE makes the current contents unreadable after the admin initiates termination. No user activity can take place until the user re-identifies and authenticates. User sessions, both remote and local, with the TOE can also be terminated due to inactivity (time threshold). Security Administrators can configure this inactivity timer on administrative sessions. Once the set inactivity period is crossed the user would be logged out form the TOE and the session would be terminated. For each user session, the TOE maintains a count of clock cycles (provided by the system clock) since the last user activity. The count is reset each time the user performs any activity within the session. When the counter reaches the number of clock cycles equating to the configured period of inactivity, the user session is locked out."
+            }
+        ]
+    },
+    {
+        "Array-1": [
+            {
+                "SFR": "FTA_SSL_EXT.1",
+                "Ans#1": "This requirement is not being satisfied. <The TSS should detail whether local administrative session locking or termination is supported and the related inactivity time period settings.>"
+            }
+        ],
+        "Excel": [
+            {
+                "SFR": "FTA_SSL_EXT.1",
+                "TSS-requirement": "The evaluator shall examine the TSS to determine whether local administrative session locking or termination is supported and the related inactivity time period settings.",
+                "Missing Information": "The TSS does not specifically address local administrative session locking or termination settings, or the inactivity time period settings for local sessions."
+            }
+        ]
+    },
+    {
+        "Array-1": [
+            {
+                "SFR": "FTA_TAB.1",
+                "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE can be accessed for administrative purposes either locally via console or remotely using SSH (CLI). For both local and remote methods of access, the TOE provides an access banner prior to login, with the authentication prompt."
+            },
+            {
+                "SFR": "FTA_TAB.1",
+                "Ans#2": "Upon investigation, the evaluator found that the TSS states that: These banners can be configured by the security administrator for both local and remote login methods. The banner can provide warnings against unauthorized access to the secure switch as well as any other information that the Security Administrator wishes to communicate."
+            }
+        ]
+    }
+]

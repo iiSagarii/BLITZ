@@ -1,0 +1,24 @@
+[
+  {
+    "DOC": [
+      {
+        "SFR": "FTA_SSL_EXT.1",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The Security Administrator can set the TOE so that local and remote sessions are terminated after a Security Administrator-configured period of inactivity. The default inactivity timeout is 10 minutes, and the configurable range is from 5 to 9999999 minutes."
+      }
+    ]
+  },
+  {
+    "Excel": [
+      {
+        "SFR": "FTA_TAB.1",
+        "TSS-requirement": "The evaluator shall check the TSS to ensure that all administrative methods of access available to the Security Administrator are listed and that the TSS states that the TOE is displaying an advisory notice and a consent warning message for each administrative method of access.",
+        "Missing Information": "Details about the specific advisory notice and consent warning message for each administrative method, and whether they are different for local vs. remote access."
+      },
+      {
+        "SFR": "FTP_ITC.1",
+        "TSS-requirement": "The evaluator shall confirm that all secure communication mechanisms are described in sufficient detail to allow the evaluator to match them to the cryptographic protocol Security Functional Requirements listed in the ST.",
+        "Missing Information": "The TSS text makes reference to other sections (FCS_TLSC_EXT.1 and FCS_TLSC_EXT.2) rather than detailing the cryptographic mechanisms within the TSS text."
+      }
+    ]
+  }
+]

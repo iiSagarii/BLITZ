@@ -1,0 +1,58 @@
+{
+  "DOC": [
+    {
+      "SFR": "FCS_CKM.4",
+      "Ans#1": "The TSF stores the following persistent keys on internal Hard Disk Drives in plaintext: HTTPS/TLS Private Host Key – generated using the DRBG and FCS_CKM.1 or entered by the Security Administrator. Syslog/TLS Private Client Key – generated using the DRBG and FCS_CKM.1 or entered by the Security Administrator. The HTTPS/TLS Private Host Key and the Syslog/TLS Private Client key are zeroized from the disk when the Security Administrator deletes the key, replaces the key, or zeroizes the entire TOE. The above key destruction methods apply to all configurations and circumstances, except one. The only situation where the key destruction may be prevented would be if the system suffers a crash or loss of power. This situation only impacts the keys that are stored on the disk. Since the TOE is inaccessible in this situation, administrative zeroization cannot be performed. However, all keys on the disk are protected because the TOE enables full disk encryption by default."
+    },
+    {
+      "SFR": "FCS_CKM.4",
+      "Ans#2": "The TSF zeroizes the HTTPS/TLS Private Host Key and the Syslog/TLS Private Client key on the hard disk drives by overwriting the file location with data from /dev/random three times. Each overwrite calls /dev/random ensuring that a different pseudo random pattern is used each time."
+    },
+    {
+      "SFR": "FCS_CKM.4",
+      "Ans#3": "The TSF zeroizes the HTTPS/TLS Private Host Key and the Syslog/TLS Private Client key on the hard disk drives by overwriting the file location with data from /dev/random three times."
+    },
+    {
+      "SFR": "FCS_CKM.4",
+      "Ans#4": "The TOE does not store any keys in encrypted form; all keys are stored in plaintext in volatile memory."
+    },
+    {
+      "SFR": "FCS_CKM.4",
+      "Ans#5": "The only situation where the key destruction may be prevented would be if the system suffers a crash or loss of power. This situation only impacts the keys that are stored on the disk. Since the TOE is inaccessible in this situation, administrative zeroization cannot be performed. However, all keys on the disk are protected because the TOE enables full disk encryption by default."
+    },
+    {
+      "SFR": "FCS_CKM.4",
+      "Ans#6": "This requirement is not being satisfied. The TSS text does not mention the use of a value that does not contain any CSP for overwriting keys. Instead, it describes the use of /dev/random for generating pseudorandom patterns, which is a CSP. The TSS should specify how the pattern is obtained and used to justify the claim that it does not contain any CSPs."
+    },
+    {
+      "SFR": "FCS_COP.1/DataEncryption",
+      "Ans#1": "The TOE provides AES encryption/decryption in CBC and GCM modes with 128-bit and 256-bit keys."
+    },
+    {
+      "SFR": "FCS_COP.1/Hash",
+      "Ans#1": "This requirement is not being satisfied. The TSS text does not explicitly document the association of the hash functions (SHA-1, SHA-256, SHA-384, SHA-512) with other TSF cryptographic functions such as digital signature verification. The TSS should clarify how these hash functions are used in conjunction with digital signature verification functions."
+    }
+  ],
+  "Excel": [
+    {
+      "SFR name": "FCS_CKM.4",
+      "TSS-requirement": "The evaluator shall examine the TSS to ensure it lists all relevant keys (describing the origin and storage location of each), all relevant key destruction situations (e.g. factory reset or device wipe function, disconnection of trusted channels, key change as part of a secure channel protocol), and the destruction method used in each case. For the purpose of this Evaluation Activity the relevant keys are those keys that are relied upon to support any of the SFRs in the Security Target.",
+      "Missing information": "The TSS text does not explicitly state that the keys support the SFRs FPT_APW.EXT.1 and FPT_SKP_EXT.1 as required by the SFR statement."
+    },
+    {
+      "SFR name": "FCS_CKM.4",
+      "TSS-requirement": "Where the TSS identifies keys that are stored in a non-plaintext form, the evaluator shall check that the TSS identifies the encryption method and the key-encrypting-key used, and that the key-encrypting-key is either itself stored in an encrypted form or that it is destroyed by a method included under FCS_CKM.4.",
+      "Missing information": "The TSS text states that the TOE does not store any keys in encrypted form, so this requirement is not applicable."
+    },
+    {
+      "SFR name": "FCS_CKM.4",
+      "TSS-requirement": "Where the ST specifies the use of “a value that does not contain any CSP” to overwrite keys, the evaluator shall examine the TSS to ensure that it describes how that pattern is obtained and used, and that this justifies the claim that the pattern does not contain any CSPs.",
+      "Missing information": "The TSS text does not specify how the pseudorandom pattern is obtained from the TSF’s RBG as required by the SFR statement. Instead, it references /dev/random, which is a CSP, without clarifying its relationship to the TSF’s RBG."
+    },
+    {
+      "SFR name": "FCS_COP.1/Hash",
+      "TSS-requirement": "The evaluator shall check that the association of the hash function with other TSF cryptographic functions (for example, the digital signature verification function) is documented in the TSS.",
+      "Missing information": "The TSS text does not explicitly document the association of the hash functions (SHA-1, SHA-256, SHA-384, SHA-512) with other TSF cryptographic functions such as digital signature verification."
+    }
+  ]
+}

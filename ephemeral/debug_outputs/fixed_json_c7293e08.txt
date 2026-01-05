@@ -1,0 +1,35 @@
+For FMT_MTD.1/CryptoKeys, the TSS should mention the types of cryptographic keys managed and the operations performed.
+
+```json
+{
+  "DOC": [
+    {
+      "SFR": "FMT_MOF.1/ManualUpdate",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that:The TSF implements the Security Administrator role to authorized administrators of the TOE. The TSF allows the Security Administrators to administer the TSF via CLI through a serial cable connected to the TOE and a web GUI over a remote HTTPS channel. The TSF permissions restrict access to these management functions to users that have been identified, authenticated, and authorized with the Security Administrator role."
+    },
+    {
+      "SFR": "FMT_MTD.1/CoreData",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that:The only functions accessible prior to authentication are the display of the configurable warning and consent banner and the automated response to ICMP echo messages with ICMP echo reply messages. No management of TSF data can be performed through any interface prior to login. Only administrators can login to the administrative interface, ensuring that access to TSF data is disallowed for non-administrative users."
+    },
+    {
+      "SFR": "FMT_MTD.1/CoreData",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that:The permissions on the trust store restrict access so that only Security Administrator users can import or delete certificates from the trust store. Security Administrator users can also view the certificates stored in the trust store. Non Security Administrator users can only view the certificates but cannot import or delete them."
+    },
+    {
+      "SFR": "FMT_MTD.1/CryptoKeys",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that:The TOE restricts the ability to manage configured X.509 certificates (public and private key pairs) to security administrators via GUI."
+    },
+    {
+      "SFR": "FMT_MTD.1/CryptoKeys",
+      "Ans#2": "This requirement is not being satisfied. The TSS text does not include sufficient details on the types of cryptographic keys managed or how the operations are performed. The TSS text should be updated to include this information."
+    }
+  ],
+  "Excel": [
+    {
+      "SFR": "FMT_MTD.1/CryptoKeys",
+      "TSS-requirement": "For non-distributed TOEs, the evaluator shall ensure the TSS lists the keys the Security Administrator is able to manage to include the options available (e.g. generating keys, importing keys, modifying keys or deleting keys) and how that how those operations are performed.",
+      "Missing information": "The TSS text does not specify the types of cryptographic keys managed or provide detailed information on how the operations are performed."
+    }
+  ]
+}
+```

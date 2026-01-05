@@ -1,0 +1,40 @@
+[
+  {
+    "DOC": [
+      {
+        "SFR": "FMT_MOF.1/Services",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: Distributed TOEs see Section 2.4.1.1. [CPP_ND_V3.0E-SD]."
+      },
+      {
+        "SFR": "FMT_MOF.1/Services",
+        "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The Security Administrator has the capability to: Start-up and shut-down of the TOE's audit functions. Start/stop and modify the behaviour of the trusted communication channel to external syslog server. Start/stop and modify the behaviour of the trusted communication channel for remote Administrative sessions (SSH)."
+      }
+    ]
+  },
+  {
+    "Excel": [
+      {
+        "SFR": "FMT_MTD.1/CoreData",
+        "TSS Requirement": "For each administrative function identified in the guidance documentation that is accessible through an interface prior to administrator log-in, the evaluator shall confirm that the TSS details how the ability to manipulate the TSF data through these interfaces is disallowed for non-administrative users.",
+        "Missing Information": "The TSS text does not mention how the ability to manipulate TSF data through interfaces prior to administrator log-in is disallowed for non-administrative users."
+      },
+      {
+        "SFR": "FMT_MTD.1/CoreData",
+        "TSS Requirement": "If the TOE supports handling of X.509v3 certificates and implements a trust store, the evaluator shall examine the TSS to determine that it contains sufficient information to describe how the ability to manage the TOE's trust store is restricted.",
+        "Missing Information": "The TSS text does not provide information on handling X.509v3 certificates or managing the trust store."
+      }
+    ]
+  },
+  {
+    "DOC": [
+      {
+        "SFR": "FMT_MTD.1/CryptoKeys",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: For distributed TOEs see Section 2.4.1.1. [CPP_ND_V3.0E-SD]."
+      },
+      {
+        "SFR": "FMT_MTD.1/CryptoKeys",
+        "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The Security Administrator can manage the following keys, with the specified operations available: SSH Keys (ECDSA, RSA): Generation, modification, and deletion. Pre-shared CAKs: Configuration (which may include generation, import, modification, and/or deletion depending on the specific implementation)."
+      }
+    ]
+  }
+]

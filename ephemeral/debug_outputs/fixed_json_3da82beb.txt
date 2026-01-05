@@ -1,0 +1,31 @@
+[
+  {
+    "DOC": [
+      {
+        "SFR": "FTA_SSL_EXT.1",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The Security Administrator can set the TOE so that local and remote sessions are terminated after a Security Administrator-configured period of inactivity. The default inactivity timeout is 10 minutes, and the configurable range is from 5 to 9999999 minutes. Although the inactivity timeout is configurable within a wide range, it is strongly recommended that the Security Administrator configure the timeout value between 5 to 15 minutes."
+      }
+    ]
+  },
+  {
+    "Excel": [
+      {
+        "SFR": "FTA_TAB.1",
+        "TSS-requirement": "TSS-requirement#2 for FTA_TAB.1",
+        "Missing information": "The TSS text does not explicitly state that the TOE displays an advisory notice and consent warning message for EACH administrative method of access. While it mentions that the access banner is displayed prior to authentication for both GUI and CLI, it does not specify that the advisory notice is tailored for each administrative method."
+      }
+    ]
+  },
+  {
+    "DOC": [
+      {
+        "SFR": "FTP_ITC.1",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF acts as a client and communicates with the external syslog server using Syslog over TLS. The communication includes authentication, ensuring the integrity and confidentiality of logs transmitted to the syslog server. The TSF implements Syslog over TLS using TLS v1.2 or TLS v1.3, supporting mutual authentication with X.509 certificates. This verification is supported for both the CN and SAN fields in the server certificate."
+      },
+      {
+        "SFR": "FTP_ITC.1",
+        "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The TSF implements Syslog over TLS and the associated secure communications are described in more detail in FCS_TLSC_EXT.1 and FCS_TLSC_EXT.2."
+      }
+    ]
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "DOC": [
+    {
+      "SFR": "FPT_TUD_EXT.1",
+      "Ans#1:": "Upon investigation, the evaluator found that the TSS states that: The Security Administrator can view the currently running version of firmware from the System Maintenance > Platform page of the web GUI. The current software version can also be found on the local console, where the version details are displayed after the user logs in. A trusted update cannot be installed on the TOE with a delayed activation."
+    },
+    {
+      "SFR": "FPT_TUD_EXT.1",
+      "Ans#2:": "Upon investigation, the evaluator found that the TSS states that: The TSF allows the Security Administrator to install software updates. When the Security Administrator uploads a firmware update using HTTPS web GUI, the TSF performs an RSA 2048 SHA-512 digital signature verification of the update using the Ivanti Secure firmware update public key. If the digital signature check is successful, the TSF installs the update. If the digital signature check detects tampering with the update and/or signature, the TSF presents the user with an error message and discards the update."
+    },
+    {
+      "SFR": "FPT_TUD_EXT.1",
+      "Ans#3:": "Upon investigation, the evaluator found that the TSS states that: The Security Administrator obtains candidate updates by downloading them on a remote workstation from the Ivanti Secure website. When the Security Administrator uploads a firmware update using HTTPS web GUI, the TSF performs an RSA 2048 SHA-512 digital signature verification of the update using the Ivanti Secure firmware update public key. The public key is distributed as part of the firmware package. Ivanti Secure retains control over the private key used to sign firmware updates. If the digital signature check is successful, the TSF installs the update. If the digital signature check detects tampering with the update and/or signature, the TSF presents the user with an error message and discards the update."
+    },
+    {
+      "SFR": "FPT_TUD_EXT.1",
+      "Ans#4:": "‘Support automatic checking for updates’ or ‘support automatic updates’ is not selected for FPT_TUD_EXT.1.2 in the ST; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FPT_TUD_EXT.1",
+      "Ans#5:": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FTA_SSL.3",
+      "Ans#1:": "Upon investigation, the evaluator found that the TSS states that: The Security Administrator can set the TOE so that local and remote sessions are terminated after a Security Administrator-configured period of inactivity. The default inactivity timeout is 10 minutes, and the configurable range is from 5 to 9999999 minutes."
+    },
+    {
+      "SFR": "FTA_SSL.4",
+      "Ans#1:": "Upon investigation, the evaluator found that the TSS states that: To log out of the remote web GUI, go to the user type icon on the top right of the screen and click logout."
+    }
+  ],
+  "Excel": []
+}

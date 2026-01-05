@@ -1,0 +1,16 @@
+{
+  "DOC": [
+    {
+      "SFR": "FAU_GEN.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: In order to identify the key being operated on, the following details are recorded for all administrative actions relating to cryptographic keys (generating, importing, changing and deleting keys): CAK – imported key reference is recorded in syslog SAK – Key Identifier is recorded in syslog KEK, SAK, ICV – key references provided by process id SSH session keys– key reference provided by process id SSH keys generated for outbound trusted channel to external syslog server SSH keys imported for outbound trusted channel to external syslog server SSH key configured for SSH public key authentication –the hash of the public key that is to be used for authentication is recorded in syslog."
+    },
+    {
+      "SFR": "FAU_GEN.1/MACSEC",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: In order to identify the key being operated on, the following details are recorded for all administrative actions relating to cryptographic keys (generating, importing, changing and deleting keys): CAK – imported key reference is recorded in syslog SAK – Key Identifier is recorded in syslog KEK, SAK, ICV – key references provided by process id SSH session keys– key reference provided by process id SSH keys generated for outbound trusted channel to external syslog server SSH keys imported for outbound trusted channel to external syslog server SSH key configured for SSH public key authentication –the hash of the public key that is to be used for authentication is recorded in syslog."
+    },
+    {
+      "SFR": "FAU_GEN.2",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE ensures that each auditable event is associated with the identity of the user that triggered the event."
+    }
+  ]
+}

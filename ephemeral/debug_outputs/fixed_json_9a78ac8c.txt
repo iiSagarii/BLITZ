@@ -1,0 +1,25 @@
+{
+  "DOC": [
+    {
+      "SFR": "FTA_SSL_EXT.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The Security Administrator can set the TOE so that local and remote sessions are terminated after a Security Administrator-configured period of inactivity."
+    },
+    {
+      "SFR": "FTA_TAB.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF presents the access banner prior to authentication when a user connects to the remote web UI or local console CLI described in the FIA_UIA_EXT.1, FIA_UAU_EXT.2 description."
+    },
+    {
+      "SFR": "FTA_TAB.1",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The TSF presents the access banner prior to authentication when a user connects to the remote web UI or local console CLI described in the FIA_UIA_EXT.1, FIA_UAU_EXT.2 description."
+    },
+    {
+      "SFR": "FTP_ITC.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF communicates with the external syslog server using Syslog over TLS with Authentication as described in the descriptions of FAU_STG_EXT.1 and FCS_TLSC_EXT.2. The TSF initiates the trusted channel with the Syslog server, ensuring assured identification of the Syslog server based on the X.509 certificates."
+    },
+    {
+      "SFR": "FTP_ITC.1",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The TSF communicates with the external syslog server using Syslog over TLS with Authentication as described in the descriptions of FAU_STG_EXT.1 and FCS_TLSC_EXT.2."
+    }
+  ],
+  "Excel": []
+}

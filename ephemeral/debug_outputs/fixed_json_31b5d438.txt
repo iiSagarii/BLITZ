@@ -1,0 +1,32 @@
+[
+  {
+    "DOC": [
+      {
+        "SFR": "FTA_SSL_EXT.1",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE can be configured to terminate local and remote administrative sessions after a specified period of inactivity. The default inactivity timeout is set to 10 minutes, with a configurable range of 5 to 9999999 minutes."
+      },
+      {
+        "SFR": "FTA_TAB.1",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF supports local and remote administrative access methods, including web GUI and local console CLI.",
+        "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The access banner is displayed prior to user authentication across all administrative access methods, including remote web GUI and local console CLI."
+      },
+      {
+        "SFR": "FTP_ITC.1",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF communicates with external syslog servers using Syslog over TLS, acting as a client. The TOE ensures assurance identification of the syslog server through X.509 certificate verification based on domain name or IP address matching.",
+        "Ans#2": "This requirement is not being satisfied. The TSS text mentions that the implementation details are described in FCS_TLSC_EXT.1 and FCS_TLSC_EXT.2, but does not provide sufficient details here to match the cryptographic protocol SFRs."
+      }
+    ],
+    "Excel": [
+      {
+        "SFR Name": "FTA_TAB.1",
+        "TSS-requirement": "The evaluator shall check the TSS to ensure that it details each administrative method of access (local and/or remote) available to the Security Administrator (e.g., serial port, SSH, HTTPS).",
+        "Missing Information": "While the TSS text mentions local and remote methods, it does not explicitly state that it lists all available methods for the Security Administrator."
+      },
+      {
+        "SFR Name": "FTP_ITC.1",
+        "TSS-requirement": "The evaluator shall also confirm that all secure communication mechanisms are described in sufficient detail to allow the evaluator to match them to the cryptographic protocol Security Functional Requirements listed in the ST.",
+        "Missing Information": "The TSS text refers to other sections (FCS_TLSC_EXT.1 and FCS_TLSC_EXT.2) for more details, but it does not provide sufficient information here to match the cryptographic protocol SFRs."
+      }
+    ]
+  }
+]

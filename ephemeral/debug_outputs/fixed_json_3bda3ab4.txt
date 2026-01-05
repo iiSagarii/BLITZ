@@ -1,0 +1,39 @@
+[
+  {
+    "DOC": [
+      {
+        "SFR": "FIA_X509_EXT.2",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF uses the certificate presented by the Syslog server to verify the server’s identity. The TSF establishes reference identifiers for the remote server as follows: When the server is specified using a domain name, the TSF verifies that the domain name matches a Subject Alternative Name DNS Name field in the certificate using exact or wildcard matching specified in Section 3.1 of RFC 2818. If the certificate does not contain any Subject Alternative Name fields, the TSF matches the domain name against the Common Name in the certificate. When the server is specified using an IP address, the TSF verifies that the IP address exactly matches a Subject Alternative Name IP Address field in the certificate using the rules specified in Section 3.1 of RFC 2818. If the certificate does not contain any Subject Alternative Name fields, the TSF matches the IP address against the Common Name in the certificate. Once the TSF has verified that the certificate identifiers are valid for the Syslog server, the TSF verifies the validity of the certificate as described in FIA_X509_EXT.1/Rev."
+      },
+      {
+        "SFR": "FIA_X509_EXT.2",
+        "Ans#2": "Upon investigation, the evaluator found that the TSS states that: If the TSF cannot contact the CRL server or the server does not respond, the TSF logs the failure and considers the certificate valid."
+      },
+      {
+        "SFR": "FIA_X509_EXT.2",
+        "Ans#3": "Upon investigation, the evaluator found that the TSS states that: The TSF allows the Security Administrator to configure the destination address, TLS protocol, and source port for communication with an external syslog server. Audit forwarding is automatically enabled when this configuration is present and automatically disabled when the configuration is removed; there is no separate control to explicitly enable or disable the feature. With respect to the handling of audit data, Security Administrators have control over local audit management functions, including the ability to clear existing logs and configure the maximum log size. When the local audit storage space becomes full, the TOE automatically overwrites the oldest audit records."
+      },
+      {
+        "SFR": "FIA_X509_EXT.3",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF allows the Security Administrator to specify an Organization Unit and additional random data used when generating the key pair. This information is optional for creating Certificate Signing Requests."
+      },
+      {
+        "SFR": "FMT_MOF.1/Functions",
+        "Ans#1": "`device-specific information' is not selected for FMT_MOF.1/Functions in the ST; hence this assurance activity is not applicable."
+      },
+      {
+        "SFR": "FMT_MOF.1/Functions",
+        "Ans#2": "Upon investigation, the evaluator found that the TSS states that: For the transmission of audit data to an external IT entity, Security Administrators can configure the destination address, TLS protocol, and source port for communication with an external syslog server. For the handling of audit data, Security Administrators have control over local audit management functions, including the ability to clear existing logs and configure the maximum log size. When the local audit storage space becomes full, the TOE automatically overwrites the oldest audit records. The log overwrite behavior is fixed and cannot be configured by the Security Administrator."
+      }
+    ]
+  },
+  {
+    "Excel": [
+      {
+        "SFR": "FIA_X509_EXT.3",
+        "TSS-requirement": "If the ST author selects 'device-specific information', the evaluator shall verify that the TSS contains a description of the device-specific fields used in certificate requests.",
+        "Missing Information": "The TSS does not describe device-specific fields used in certificate requests."
+      }
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "Array-1": [
+    {
+      "SFR": "FPT_TUD_EXT.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF allows the Security Administrator to view the currently running version of firmware from the System Maintenance > Platform page of the web GUI. The current software version can also be found on the local console, where the version details are displayed after the user logs in."
+    },
+    {
+      "SFR": "FPT_TUD_EXT.1",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The TSF performs an RSA 2048 SHA-512 digital signature verification of the update using the Ivanti Secure firmware update public key. If the digital signature check is successful, the TSF installs the update. If the digital signature check detects tampering with the update and/or signature, the TSF presents the user with an error message and discards the update."
+    },
+    {
+      "SFR": "FPT_TUD_EXT.1",
+      "Ans#3": "Upon investigation, the evaluator found that the TSS states that: The evaluator shall verify that the TSS describes the method by which the digital signature is verified to include how the candidate updates are obtained, the processing associated with verifying the digital signature of the update, and the actions that take place for both successful and unsuccessful signature verification."
+    },
+    {
+      "SFR": "FPT_TUD_EXT.1",
+      "Ans#4": "'Support automatic checking for updates' or 'support automatic updates' is not selected for FPT_TUD_EXT.1 in the SFR statement; hence this assurance activity is not applicable."
+    }
+  ],
+  "Excel": [
+    {
+      "SFR": "FPT_TUD_EXT.1",
+      "TSS-requirement": "If the options ‘support automatic checking for updates’ or ‘support automatic updates’ are chosen from the selection in FPT_TUD_EXT.1.2, the evaluator shall verify that the TSS explains what actions are involved in automatic checking or automatic updating by the TOE, respectively.",
+      "Missing Information": "'Support automatic checking for updates' or 'support automatic updates' is not selected for FPT_TUD_EXT.1 in the SFR statement"
+    }
+  ]
+}

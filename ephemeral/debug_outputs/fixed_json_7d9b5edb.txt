@@ -1,0 +1,9 @@
+{
+  "Array-1": [
+    {
+      "SFR": "FCS_RBG_EXT.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE implements a DRBG in accordance with ISO/IEC 18031:2011 using a CTR DRBG with AES-256. The TSF seeds the CTR_DRBG using 256-bits of data that contains at least 256 bits of entropy. The TSF gathers and pools entropy from 3 software based noise sources."
+    }
+  ],
+  "Excel": []
+}

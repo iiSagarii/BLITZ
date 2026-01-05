@@ -1,0 +1,158 @@
+SFR statement for FCS_TLSS_EXT.1:
+FCS_TLSS_EXT.1.1
+The TSF shall implement [TLS 1.3 (RFC 8446), TLS 1.2 (RFC 5246)] and reject all other TLS and SSL versions. The TLS implementation will support the following ciphersuites:
+[
+TLS_RSA_WITH_AES_128_CBC_SHA as defined in RFC 3268
+TLS_RSA_WITH_AES_256_CBC_SHA as defined in RFC 3268
+TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA as defined in RFC 8422
+TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA as defined in RFC 8422
+TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA as defined in RFC 8422
+TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA as defined in RFC 8422
+TLS_RSA_WITH_AES_128_CBC_SHA256 as defined in RFC 5246
+TLS_RSA_WITH_AES_256_CBC_SHA256 as defined in RFC 5246
+TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 as defined in RFC 5289
+TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 as defined in RFC 5289
+TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 as defined in RFC 5289
+TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 as defined in RFC 5289
+TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 as defined in RFC 5289
+TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 as defined in RFC 5289
+TLS_AES_128_GCM_SHA256
+TLS_AES_256_GCM_SHA384
+] and no other ciphersuites.
+FCS_TLSS_EXT.1.2
+The TSF shall authenticate itself using X.509 certificate(s) using [RSA with key size [2048, 3072, 4096] bits; ECDSA over NIST curves [secp256r1, secp384r1, secp521r1] and no other curves].
+FCS_TLSS_EXT.1.3
+The TSF shall perform key exchange using: [
+RSA key establishment with key size [2048, 3072, 4096] bits;
+EC Diffie-Hellman key agreement over NIST curves [secp256r1, secp384r1, secp521r1] and no other curves
+].
+FCS_TLSS_EXT.1.4
+The TSF shall support [no session resumption].
+
+FCS_TLSS_EXT.1.5
+The TSF [provides] the ability to configure the list of supported ciphersuites as defined in FCS_TLSS_EXT.1.1.
+
+FCS_TLSS_EXT.1.6
+The TSF shall prohibit the use of the following extensions:
+Early data extension
+
+FCS_TLSS_EXT.1.7
+The TSF shall [not use PSKs].
+
+FCS_TLSS_EXT.1.8
+The TSF shall [reject [TLS 1.2, TLS 1.3] renegotiation attempts].
+Identification and Authentication (FIA)
+
+--------------------
+
+TSS text for FCS_TLSS_EXT.1:
+The TSF supports TLSv1.2 and TLSv1.3 for HTTPs/TLS. If the TSF receives a ClientHello message that requests TLSv1.1 or earlier, the TSF sends a fatal handshake_failure message and terminates the connection.
+The TSF supports the following ciphersuties for connections to the TOE:
+TLS_RSA_WITH_AES_128_CBC_SHA
+TLS_RSA_WITH_AES_256_CBC_SHA
+TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+TLS_RSA_WITH_AES_128_CBC_SHA256
+TLS_RSA_WITH_AES_256_CBC_SHA256
+TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_AES_128_GCM_SHA256
+TLS_AES_256_GCM_SHA384
+The Security Administrator can enable and disable individual ciphersuites as well as specifying the preferred ordering of ciphersuites. The TOE conforms to RFC 5246, section 7.4.3 for key exchange.
+The TSF supports the following algorithms and key sizes for authenticating itself to TLS clients:
+RSA: 2048, 3072, and 4096-bit RSA keys.
+ECDSA: secp256r1, secp384r1 or secp521r1 curves.
+The TSF prefers the secp256r1 curve when selecting an ECDHE ciphersuite if the client indicates support for all three curves in the ClientHello message.
+The TSF does not support session resumption.
+When acting as a server, the TSF listens on port 443 for HTTPs connections. The TSF uses HTML over HTTPs to present the administrative users with a secure management interface. The TSF uses TLS to provide a secure connection between the TSF and remote Security Administrators.
+The TOE does not support the use of Pre-Shared Keys (PSKs) in TLSv1.3, making out-of-band provisioning of PSKs not possible in the evaluated configuration.
+
+--------------------
+
+TSS-requirement#1 for FCS_TLSS_EXT.1.1: The evaluator shall check the description of the implementation of this protocol in the TSS to ensure that the cipher suites supported are specified.
+Ans#1 for FCS_TLSS_EXT.1.1: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FCS_TLSS_EXT.1.1 here OR mention what is missing and is to be added into the TSS text for FCS_TLSC_EXT.1.1>
+TSS-requirement#2 for FCS_TLSS_EXT.1.1: The evaluator shall check the TSS to ensure that the cipher suites specified are identical to those listed for this component.
+Ans#2 for FCS_TLSS_EXT.1.1: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FCS_TLSS_EXT.1.1 here OR mention what is missing and is to be added into the TSS text for FCS_TLSC_EXT.1.1>
+TSS-requirement#3 for FCS_TLSS_EXT.1.1: The evaluator shall verify that the TSS contains a description of how the TOE technically prevents the use of unsupported and undefined SSL and TLS versions.
+Ans#3 for FCS_TLSS_EXT.1.1: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FCS_TLSS_EXT.1.1 here OR mention what is missing and is to be added into the TSS text for FCS_TLSC_EXT.1.1>
+
+TSS-requirement#1 for FCS_TLSS_EXT.1.2: The evaluator shall verify that the TSS describes the algorithms and key sizes the TSF supports for authenticating itself to TLS clients.
+Ans#1 for FCS_TLSS_EXT.1.2: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FCS_TLSS_EXT.1.2 here OR mention what is missing and is to be added into the TSS text for FCS_TLSC_EXT.1.2>
+TSS-requirement#2 for FCS_TLSS_EXT.1.2: The evaluator shall ensure these algorithms are consistent with the selected cipher suites.
+Ans#2 for FCS_TLSS_EXT.1.2: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FCS_TLSS_EXT.1.2 here OR mention what is missing and is to be added into the TSS text for FCS_TLSC_EXT.1.2>
+
+TSS-requirement#1 for FCS_TLSS_EXT.1.3: The evaluator shall verify that the TSS lists all EC Diffie-Hellman curves and/or Diffie-Hellman groups used in the key establishment by the TOE when acting as a TLS Server. The evaluator shall ensure these algorithms are consistent with the selected cipher suites.
+Ans#1 for FCS_TLSS_EXT.1.3: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FCS_TLSS_EXT.1.3 here OR mention what is missing and is to be added into the TSS text for FCS_TLSC_EXT.1.3>
+
+TSS-requirement#1 for FCS_TLSS_EXT.1.4: The evaluator shall verify that the TSS describes if session resumption based on session IDs is supported (RFC 4346 and/or RFC 5246), if session resumption based on session tickets is supported (RFC 5077) and/or if session resumption according to RFC 8446 is supported.
+Ans#1 for FCS_TLSS_EXT.1.4: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FCS_TLSS_EXT.1.4 here OR mention what is missing and is to be added into the TSS text for FCS_TLSC_EXT.1.4>
+TSS-requirement#2 for FCS_TLSS_EXT.1.4: If session tickets are supported, the evaluator shall verify that the TSS describes that the session tickets are encrypted using symmetric algorithms consistent with FCS_COP.1/DataEncryption.
+Ans#2 for FCS_TLSS_EXT.1.4: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FCS_TLSS_EXT.1.4 here OR mention what is missing and is to be added into the TSS text for FCS_TLSC_EXT.1.4>
+TSS-requirement#3 for FCS_TLSS_EXT.1.4: The evaluator shall verify that the TSS identifies the key lengths and algorithms used to protect session tickets.
+Ans#3 for FCS_TLSS_EXT.1.4: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FCS_TLSS_EXT.1.4 here OR mention what is missing and is to be added into the TSS text for FCS_TLSC_EXT.1.4>
+TSS-requirement#4 for FCS_TLSS_EXT.1.4: If session tickets are supported, the evaluator shall verify that the TSS describes that session tickets adhere to the structural format provided in Section 4 of RFC 5077 and if not, a justification shall be given of the actual session ticket format.
+Ans#4 for FCS_TLSS_EXT.1.4: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FCS_TLSS_EXT.1.4 here OR mention what is missing and is to be added into the TSS text for FCS_TLSC_EXT.1.4>
+TSS-requirement#5 for FCS_TLSS_EXT.1.4: If the TOE claims a TLS server capable of session resumption (as a single context, or across multiple contexts), the evaluator shall verify that the TSS describes how session resumption operates (i.e. what would trigger a full handshake, e.g. checking session status, checking Session ID, etc.). If multiple contexts are used, the TSS describes how session resumption is coordinated across those contexts. In case session establishment and session resumption are always using a separate context, the TSS shall describe how the contexts interact with respect to session resumption (in particular regarding the session ID). It is acceptable for sessions established in one context to be resumable in another context.
+Ans#5 for FCS_TLSS_EXT.1.4: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FCS_TLSS_EXT.1.4 here OR mention what is missing and is to be added into the TSS text for FCS_TLSC_EXT.1.4>
+
+TSS-requirement#1 for FCS_TLSS_EXT.1.5: The evaluator shall verify that TSS describes whether the list of supported cipher suites can be configured or not.
+Ans#1 for FCS_TLSS_EXT.1.5: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FCS_TLSS_EXT.1.5 here OR mention what is missing and is to be added into the TSS text for FCS_TLSC_EXT.1.5>
+
+Ans#1 for FCS_TLSS_EXT.1.6: There are no TSS requirements for this SFR.
+
+TSS-requirement#1 for FCS_TLSS_EXT.1.7: The evaluator shall verify in the TSS that, for TLS 1.3, the TOE shall not permit out-of-band provisioning of pre-shared keys (PSKs) in the evaluated configuration.
+Ans#1 for FCS_TLSS_EXT.1.7: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FCS_TLSS_EXT.1.7 here OR mention what is missing and is to be added into the TSS text for FCS_TLSC_EXT.1.7>
+
+Ans#1 for FCS_TLSS_EXT.1.8: There are no TSS requirements for this SFR.
+
+================================================================================
+
+SFR statement for FIA_AFL.1:
+FIA_AFL.1.1
+The TSF shall detect when an Administrator configurable positive integer within [3 to 10] unsuccessful authentication attempts occur related to Administrators attempting to authenticate remotely using a password.
+FIA_AFL.1.2
+When the defined number of unsuccessful authentication attempts has been met, the TSF shall [prevent the offending Administrator from successfully establishing a remote session using any authentication method that involves a password until an Administrator defined time period has elapsed].
+
+--------------------
+
+TSS text for FIA_AFL.1:
+The Security Administrator can configure the number of unsuccessful login attempts allowed for a remote administrator before a lockout occurs and can set the duration of the lockout. The number of attempts can be configured within a range of 3 to 10. The lockout duration can be configured between 10 and 999 minutes.
+If a Security Administrator enters an incorrect password the configured number of times, the administrator is locked out and cannot log in through any remote interface on the TOE. Once the lockout duration has expired, the administrator is permitted to authenticate to the TOE again.
+Lockouts are not enforced on the TOE’s console interface. This ensures that authentication failures do not result in a situation where no administrator access is available.
+
+--------------------
+
+TSS-requirement#1 for FIA_AFL.1: The evaluator shall examine the TSS to determine that it contains a description, for each supported method for remote administrative actions, of how successive unsuccessful authentication attempts are detected and tracked. The TSS shall also describe the method by which the remote administrator is prevented from successfully logging on to the TOE, and the actions necessary to restore this ability.
+Ans#1 for FIA_AFL.1: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FIA_AFL.1 here OR mention what is missing and is to be added into the TSS text for FIA_AFL.1>
+TSS-requirement#2 for FIA_AFL.1: The evaluator shall examine the TSS to confirm that the TOE ensures that authentication failures by remote administrators cannot lead to a situation where no administrator access is available, either permanently or temporarily (e.g. by providing local logon which is not subject to blocking).
+Ans#2 for FIA_AFL.1: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FIA_AFL.1 here OR mention what is missing and is to be added into the TSS text for FIA_AFL.1>
+
+================================================================================
+
+SFR statement for FIA_PMG_EXT.1:
+FIA_PMG_EXT.1.1
+The TSF shall provide the following password management capabilities for administrative passwords:
+Passwords shall be able to be composed of any combination of upper and lower case letters, numbers, and the following special characters: [“!”, “@”, “#”, “$”, “%”, “^”, “&”, “*”, “(“, “)”, [and standard printable ASCII characters(values 0x20 – 0x7E)]]
+Minimum password length shall be configurable to between [10] and [15] characters.
+
+--------------------
+
+TSS text for FIA_PMG_EXT.1:
+The TSF supports administrator password composition to include any combination of upper and lower case letters, numbers, and the following special characters “!”, “@”, “#”, “$”, “%”, “^”, “&”, “*”, “(“, “)”, and the complete set of standard printable ASCII characters (values 0x20 – 0x7E) with a minimum length settable by the administrator and it must be 15 characters.
+
+--------------------
+
+TSS-requirement#1 for FIA_PMG_EXT.1: The evaluator shall check that the TSS:
+lists the supported special character(s) for the composition of administrator passwords.
+to ensure that the minimum_password_length parameter is configurable by a Security Administrator.
+lists the range of values supported for the minimum_password_length parameter. The listed range shall include the value of 15.
+Ans#1 for FIA_PMG_EXT.1: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FIA_PMG_EXT.1 here OR mention what is missing and is to be added into the TSS text for FIA_PMG_EXT.1>
+
+================================================================================
+

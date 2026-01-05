@@ -1,0 +1,9 @@
+python-dotenv
+openai
+docx
+dotenv
+PySide6
+openpyxl
+python-docx
+tkvideo
+lxml 

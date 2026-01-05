@@ -1,0 +1,48 @@
+[
+  {
+    "DOC": [
+      {
+        "SFR": "FIA_UAU.7",
+        "Ans#1": "This requirement is not being satisfied. For FIA_UAU.7: The TSS should describe the remote logon process and any protocols used. Additional information to be included: The TSF uses secure methods for remote authentication, ensuring no feedback is given during password entry."
+      }
+    ],
+    "Excel": [
+      {
+        "SFR": "FIA_UAU.7",
+        "TSS-requirement": "The evaluator shall examine the TSS to determine that it describes the logon process for remote authentication mechanism",
+        "Missing Information": "Description of remote logon process and protocols used"
+      }
+    ]
+  },
+  {
+    "DOC": [
+      {
+        "SFR": "FIA_UIA_EXT.1",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF utilizes HTTPS... to secure remote administration web GUI sessions. For local authentication, the TSF uses a serial CLI with username and password prompts."
+      },
+      {
+        "SFR": "FIA_UIA_EXT.1",
+        "Ans#2": "Upon investigation, the evaluator found that the TSS states that: Prior to successful identification and authentication, the TSF displays the access banner specified in FTA_TAB.1 and responds to ICMP Echo messages."
+      }
+    ]
+  },
+  {
+    "DOC": [
+      {
+        "SFR": "FIA_X509_EXT.1/Rev",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The rules for extendedKeyUsage fields are followed in all instances; Server Authentication purpose is checked for all presented Server certificates."
+      },
+      {
+        "SFR": "FIA_X509_EXT.1/Rev",
+        "Ans#2": "This requirement is not being satisfied. For FIA_X509_EXT.1/Rev: The TSS should explain if intermediate CA certificates are validated during authentication. Information to be added: Revocation checking for intermediate CA certificates is performed as part of the validation process."
+      }
+    ],
+    "Excel": [
+      {
+        "SFR": "FIA_X509_EXT.1/Rev",
+        "TSS-requirement": "The TSS shall describe when revocation checking is performed and on what certificates",
+        "Missing Information": "Handling of intermediate CA certificates during authentication"
+      }
+    ]
+  }
+]

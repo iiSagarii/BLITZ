@@ -1,0 +1,51 @@
+{
+  "DOC": [
+    {
+      "SFR": "FCS_TLSS_EXT.1.1",
+      "Ans#1": "The TSF supports TLSv1.2 and TLSv1.3 for HTTPS/TLS. If the TSF receives a ClientHello message that requests TLSv1.1 or earlier, the TSF sends a fatal handshake_failure message and terminates the connection.",
+      "Ans#2": "This requirement is not being satisfied. The TSS text does not list all the cipher suites specified in the SFR statement for FCS_TLSS_EXT.1.1. The SFR includes additional cipher suites such as TLS_RSA_WITH_AES_128_CBC_SHA256 and TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 which are not explicitly mentioned in the TSS text.",
+      "Ans#3": "The TSF supports TLSv1.2 and TLSv1.3 for HTTPS/TLS. If the TSF receives a ClientHello message that requests TLSv1.1 or earlier, the TSF sends a fatal handshake_failure message and terminates the connection."
+    },
+    {
+      "SFR": "FCS_TLSS_EXT.1.2",
+      "Ans#1": "The TSF supports the following algorithms and key sizes for authenticating itself to TLS clients and establishing keys: RSA: 2048, 3072, and 4096-bit RSA keys. ECDSA: secp256r1, secp384r1 or secp521r1 curves.",
+      "Ans#2": "The TSF supports the following algorithms and key sizes for authenticating itself to TLS clients and establishing keys: RSA: 2048, 3072, and 4096-bit RSA keys. ECDSA: secp256r1, secp384r1 or secp521r1 curves."
+    },
+    {
+      "SFR": "FCS_TLSS_EXT.1.3",
+      "Ans#1": "The TSF supports the following algorithms and key sizes for authenticating itself to TLS clients and establishing keys: ECDSA: secp256r1, secp384r1 or secp521r1 curves."
+    },
+    {
+      "SFR": "FCS_TLSS_EXT.1.4",
+      "Ans#1": "The TSF does not support session resumption.",
+      "Ans#2": "The TOE is not a distributed TOE; hence this assurance activity is not applicable.",
+      "Ans#3": "The TOE is not a distributed TOE; hence this assurance activity is not applicable.",
+      "Ans#4": "The TOE is not a distributed TOE; hence this assurance activity is not applicable.",
+      "Ans#5": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FCS_TLSS_EXT.1.5",
+      "Ans#1": "The Security Administrator can enable and disable individual ciphersuites as well as specify the preferred ordering of ciphersuites."
+    },
+    {
+      "SFR": "FCS_TLSS_EXT.1.7",
+      "Ans#1": "The TOE does not support the use of Pre-Shared Keys (PSKs) in TLSv1.3, making out-of-band provisioning of PSKs not possible in the evaluated configuration."
+    },
+    {
+      "SFR": "FIA_AFL.1",
+      "Ans#1": "The Security Administrator can configure the number of unsuccessful login attempts allowed for a remote administrator before a lockout occurs and can set the duration of the lockout. The number of attempts can be configured within a range of 3 to 10. The lockout duration can be configured between 3 and 999 minutes. If a Security Administrator enters an incorrect password the configured number of times, the administrator is locked out and cannot log in through any remote interface on the TOE. Once the lockout duration has expired, the administrator is permitted to authenticate to the TOE again.",
+      "Ans#2": "Lockouts are not enforced on the TOE’s local console interface. This ensures that authentication failures do not result in a situation where no administrator access is available."
+    },
+    {
+      "SFR": "FIA_PMG_EXT.1",
+      "Ans#1": "The TSF supports administrator password composition to include any combination of upper and lower case letters, numbers, and the following special characters “!”, “@”, “#”, “$”, “%”, “^”, “&”, “*”, “(“, “)” with the password length configurable by the administrator to a minimum range of 10 to 15 characters."
+    }
+  ],
+  "Excel": [
+    {
+      "SFR": "FCS_TLSS_EXT.1.1",
+      "TSS-requirement": "The evaluator shall check the TSS to ensure that the cipher suites specified are identical to those listed for this component.",
+      "Missing information": "The TSS text does not list all the cipher suites specified in the SFR statement for FCS_TLSS_EXT.1.1. The SFR includes additional cipher suites such as TLS_RSA_WITH_AES_128_CBC_SHA256 and TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 which are not explicitly mentioned in the TSS text."
+    }
+  ]
+}

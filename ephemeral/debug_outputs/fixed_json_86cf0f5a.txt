@@ -1,0 +1,33 @@
+[
+  {
+    "DOC": [
+      {
+        "SFR": "FPT_SKT_EXT.1",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE handles zeroization for all CSP, plaintext secret and private cryptographic keys according to Table 19 – Zeroization of Keys and CSP. The TOE does not provide a CLI interface to permit the viewing of keys. Cryptographic keys are protected through the enforcement of kernel-level file access rights, limiting access to the contents of cryptographic key containers to processes with cryptographic rights or shell users with root permission."
+      }
+    ],
+    "Excel": [
+      {
+        "SFR": "FPT_SKT_EXT.1",
+        "TSS-requirement": "The evaluator shall examine the TSS to determine that it details how any pre-shared keys, symmetric keys, and private keys are stored and that they are unable to be viewed through an interface designed specifically for that purpose, as outlined in the application note. If these values are not stored in plaintext, the TSS shall describe how they are protected/obscured.",
+        "Missing Information": "This requirement is not being satisfied. FPT_SKT_EXT.1: The TSS text does not explicitly state that pre-shared keys, symmetric keys, and private keys are stored in a manner that prevents their viewing through an interface designed specifically for that purpose."
+      }
+    ]
+  },
+  {
+    "DOC": [
+      {
+        "SFR": "FPT_STM_EXT.1",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: All the audit events recorded by TOE are timestamped. The clock function of the TOE provides a source of date and time information for the appliance, used in audit timestamps, which is maintained using the hardware Time Stamp Counter as the clock source. Time on the TOE can only be configured manually by the security administrator.",
+        "Ans#2": "‘obtain time from the underlying virtualization system’ is not selected for FPT_STM_EXT.1 in the ST; hence this assurance activity is not applicable."
+      }
+    ],
+    "Excel": [
+      {
+        "SFR": "FPT_STM_EXT.1",
+        "TSS-requirement": "The evaluator shall examine the TSS to ensure that it lists each security function that makes use of time, and that it provides a description of how the time is maintained and considered reliable in the context of each of the time related functions.",
+        "Missing Information": "This requirement is not being satisfied. FPT_STM_EXT.1: The TSS text does not list each security function that makes use of time and how it is maintained and considered reliable."
+      }
+    ]
+  }
+]

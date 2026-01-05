@@ -1,0 +1,37 @@
+{
+  "DOC": [
+    {
+      "SFR": "FCS_CKM.4",
+      "Ans#1": "The TSF stores the following persistent keys on internal Hard Disk Drives in plaintext: HTTPs/TLS Private Host Key – generated using the DRBG and FCS_CKM.1 or entered by the Security Administrator. Syslog/TLS Private Client Key – generated using the DRBG and FCS_CKM.1 or entered by the Security Administrator. The HTTPS/TLS Private Host Key and the Syslog/TLS Private Client key are zeroized from the disk when the Security Administrator deletes the key, replaces the key, or zeroizes the entire TOE. The TSF zeroizes the HTTPs/TLS Private Host Key and the Syslog/TLS Private Client key on the hard disk drives by overwriting the file location with data from /dev/random three times. Each overwrite calls /dev/random ensuring that a different pseudo random pattern is used each time. The TSF stores loads the persistent keys into RAM when they are used and the TSF also stores the following ephemeral keys in RAM: TLS Session keys – Established according to FCS_CKM.2 and derived using the TLS KDF. DRBG State – Derived from the entropy source. HTTPS/TLS keys are zeroized from RAM when the HTTP or Syslog process terminates. The TLS Session keys are zeroized from RAM when the associated TLS session is terminated. The DRBG state and all ephemeral keys are zeroized when the TSF is shutdown, suffers loss of power, or restarted. The TSF zeroizes keys in RAM by writing zeros to the memory location one time and performing a read verify to ensure that the memory location was set to all zeros. If the read verify fails, the TSF repeats the zeroization process. The above key destruction methods apply to all configurations and circumstances, except one. The only situation where the key destruction may be prevented would be if the system suffers a crash or loss of power. This situation only impacts on the keys that are stored on the disk. Since the TOE is inaccessible in this situation, administrative zeroization cannot be performed. However, all keys on the disk are protected because the TOE enables full disk encryption by default."
+    },
+    {
+      "SFR": "FCS_CKM.4",
+      "Ans#2": "The TSF zeroizes the HTTPs/TLS Private Host Key and the Syslog/TLS Private Client key on the hard disk drives by overwriting the file location with data from /dev/random three times. Each overwrite calls /dev/random ensuring that a different pseudo random pattern is used each time."
+    },
+    {
+      "SFR": "FCS_CKM.4",
+      "Ans#3": "The TSF zeroizes the HTTPs/TLS Private Host Key and the Syslog/TLS Private Client key on the hard disk drives by overwriting the file location with data from /dev/random three times. Each overwrite calls /dev/random ensuring that a different pseudo random pattern is used each time."
+    },
+    {
+      "SFR": "FCS_CKM.4",
+      "Ans#4": "The TOE does not store any keys in non-plaintext form."
+    },
+    {
+      "SFR": "FCS_CKM.4",
+      "Ans#5": "The only situation where the key destruction may be prevented would be if the system suffers a crash or loss of power. This situation only impacts on the keys that are stored on the disk. Since the TOE is inaccessible in this situation, administrative zeroization cannot be performed. However, all keys on the disk are protected because the TOE enables full disk encryption by default."
+    },
+    {
+      "SFR": "FCS_CKM.4",
+      "Ans#6": "The TSF zeroizes the HTTPs/TLS Private Host Key and the Syslog/TLS Private Client key on the hard disk drives by overwriting the file location with data from /dev/random three times. Each overwrite calls /dev/random ensuring that a different pseudo random pattern is used each time."
+    },
+    {
+      "SFR": "FCS_COP.1/DataEncryption",
+      "Ans#1": "The TOE provides AES encryption/decryption in CBC and GCM modes with 128- and 256-bit keys."
+    },
+    {
+      "SFR": "FCS_COP.1/Hash",
+      "Ans#1": "SHA-256 is used for key generation using SHA-256 as specified in NIST SP 800-90 DRBG. SHA-1, SHA-256, and SHA-384 are used in support of TLS. SHA-256 is used for file integrity checking and password obfuscation. SHA-512 is used for hashing of the digital signature to verify the firmware manifest file."
+    }
+  ],
+  "Excel": []
+}

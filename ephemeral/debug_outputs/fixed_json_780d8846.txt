@@ -1,0 +1,65 @@
+[
+    {
+        "DOC": [
+            {
+                "SFR": "FMT_SMF.1",
+                "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF implements the Security Administrator role to authorized administrators of the TOE. The TSF allows the Security Administrators to administer the TSF via CLI through a serial cable connected to the TOE and a web GUI over a remote HTTPS channel. The TSF permissions restrict access to these management functions to users that have been identified, authenticated, and authorized with the Security Administrator role."
+            },
+            {
+                "SFR": "FMT_SMF.1",
+                "Ans#2": "This requirement is not being satisfied. This requirement is not being satisfied. The TSS does not specify which management functions are available through which interface(s) (local administration interface, remote administration interface)."
+            },
+            {
+                "SFR": "FMT_SMF.1",
+                "Ans#3": "Upon investigation, the evaluator found that the TSS states that: The local console allows the Security Administrator to perform the following TSF management functions using the instructions provided in the administrative guide: Ability to update the TOE, and to verify the updates using digital signature capability prior to installing those updates."
+            },
+            {
+                "SFR": "FMT_SMF.1",
+                "Ans#4": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+            },
+            {
+                "SFR": "FMT_SMF.1",
+                "Ans#5": "Upon investigation, the evaluator found that the TSS states that: The TSF implements local logging by maintaining log files of audit records. The logs are stored in a persistent format, ensuring that audit records are preserved across reboots or power cycles. The minimum storage size allocated for audit records is 1 MB."
+            },
+            {
+                "SFR": "FMT_SMF.1",
+                "Ans#6": "This requirement is not being satisfied. The TSS does not provide sufficient details on how log files are maintained on the TOE."
+            }
+        ],
+        "Excel": [
+            {
+                "SFR": "FMT_SMF.1",
+                "TSS-requirement": "The evaluator shall confirm that the TSS details which security management functions are available through which interface(s) (local administration interface, remote administration interface).",
+                "Missing information": "The TSS does not specify which management functions are available through which interface(s)."
+            },
+            {
+                "SFR": "FMT_SMF.1",
+                "TSS-requirement": "The evaluator shall check that the TOE behaviour observed during testing of the configured SFRs is as described in the TSS and Guidance Documentation.",
+                "Missing information": "The TSS does not provide sufficient details on how log files are maintained on the TOE."
+            }
+        ]
+    },
+    {
+        "DOC": [
+            {
+                "SFR": "FMT_SMR.2",
+                "Ans#1": "This requirement is not being satisfied. The TSS does not detail the restrictions of the roles involving administration of the TOE."
+            }
+        ],
+        "Excel": [
+            {
+                "SFR": "FMT_SMR.2",
+                "TSS-requirement": "The evaluator shall examine the TSS to determine that it details the TOE supported roles and any restrictions of the roles involving administration of the TOE...",
+                "Missing information": "The TSS does not detail the restrictions of the roles involving administration of the TOE."
+            }
+        ]
+    },
+    {
+        "DOC": [
+            {
+                "SFR": "FPT_APW_EXT.1",
+                "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF does not store plaintext passwords. The TSF stores the SHA-256 hash of each users’ password. Additionally, the TSF does not provide a user interface to view the password hashes."
+            }
+        }
+    }
+]

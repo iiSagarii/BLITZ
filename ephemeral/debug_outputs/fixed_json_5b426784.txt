@@ -1,0 +1,49 @@
+{
+  "DOC": [
+    {
+      "SFR": "FPT_TUD_EXT.1",
+      "Ans#1": "The TSF allows the Security Administrator to view the currently running version of firmware from the System Maintenance > Platform page of the web UI."
+    },
+    {
+      "SFR": "FPT_TUD_EXT.1",
+      "Ans#2": "The TSF allows the Security Administrator to install software updates. The Security Administrator obtains candidate updates by downloading them on a remote workstation from the Ivanti Secure website. When the Security Administrator uploads a firmware update using HTTPS webUI, the TSF performs an RSA 2048 SHA-512 digital signature verification of the update using the Ivanti Secure firmware update public key. The public key is distributed as part of the firmware package. Ivanti Secure retains control over the private key used to sign firmware updates. If the signature check is successful, the TSF installs the update. If the signature check detects tampering with the update and/or signature, the TSF presents the user with an error message and discards the update."
+    },
+    {
+      "SFR": "FPT_TUD_EXT.1",
+      "Ans#3": "The Security Administrator obtains candidate updates by downloading them on a remote workstation from the Ivanti Secure website. When the Security Administrator uploads a firmware update using HTTPS webUI, the TSF performs an RSA 2048 SHA-512 digital signature verification of the update using the Ivanti Secure firmware update public key. The public key is distributed as part of the firmware package. Ivanti Secure retains control over the private key used to sign firmware updates. If the signature check is successful, the TSF installs the update. If the signature check detects tampering with the update and/or signature, the TSF presents the user with an error message and discards the update."
+    },
+    {
+      "SFR": "FPT_TUD_EXT.1",
+      "Ans#4": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FPT_TUD_EXT.1",
+      "Ans#5": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FTA_SSL.3",
+      "Ans#1": "The Security Administrator can set the TOE so that local and remote sessions are terminated after a Security Administrator-configured period of inactivity."
+    },
+    {
+      "SFR": "FTA_SSL.4",
+      "Ans#1": "The local and Remote user sessions can be terminated by users using the instructions provided in the administrative guide."
+    }
+  ],
+  "Excel": [
+    {
+      "SFR": "FPT_TUD_EXT.1",
+      "TSS-requirement": "The evaluator shall verify that the TSS describe how to query the currently active version. If a trusted update can be installed on the TOE with a delayed activation, the TSS shall describe how and when the inactive version becomes active. The evaluator shall verify this description.",
+      "Missing information": "The TSS does not describe how and when an inactive version becomes active if a trusted update is installed with delayed activation."
+    },
+    {
+      "SFR": "FTA_SSL.3",
+      "TSS-requirement": "The evaluator shall examine the TSS to determine that it details the administrative remote session termination and the related inactivity time period.",
+      "Missing information": "The TSS does not specify the exact time interval for session inactivity termination."
+    },
+    {
+      "SFR": "FTA_SSL.4",
+      "TSS-requirement": "The evaluator shall examine the TSS to determine that it details how the remote administrative session (and if applicable the local administrative session) are terminated.",
+      "Missing information": "The TSS does not detail the specific method by which the user Administrator-initiated termination is performed."
+    }
+  ]
+}

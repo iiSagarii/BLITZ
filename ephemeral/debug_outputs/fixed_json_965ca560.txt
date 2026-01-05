@@ -1,0 +1,68 @@
+{
+  "DOC": [
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#1: Upon investigation, the evaluator found that the TSS states that: The available management functions are listed below and these can be accessed via the SSH remotely or locally via console: Ability to administer the TOE remotely; Ability to configure the access banner; Ability to configure the remote session inactivity time before session termination; Ability to update the TOE, and to verify the updates using digital signature capability prior to installing those updates; [Ability to configure local audit behaviour (e.g. changes to storage locations for audit; Ability to configure thresholds for SSH rekeying; Ability to re-enable an Administrator account; Ability to set the time which is used for time-stamps; Ability to configure the reference identifier for the peer;]."
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#2: This requirement is not being satisfied. The TSS text for FMT_SMF.1 needs to include: A detailed description of which management functions are available through which interfaces (local administration interface, remote administration interface)."
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#3: This requirement is not being satisfied. The TSS text for FMT_SMF.1 needs to include: A detailed description of the local administrative interface that is used for managing the TOE."
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#4: This requirement is not being satisfied. The TSS text for FMT_SMF.1 needs to include: A detailed description of the ways to configure the interaction between TOE components, as applicable for distributed TOEs."
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#5: Upon investigation, the evaluator found that the TSS states that: The available management functions are listed below and these can be accessed via the SSH remotely or locally via console: Ability to administer the TOE remotely; Ability to configure the access banner; Ability to configure the remote session inactivity time before session termination; Ability to update the TOE, and to verify the updates using digital signature capability prior to installing those updates; [Ability to configure local audit behaviour (e.g. changes to storage locations for audit; Ability to configure thresholds for SSH rekeying; Ability to re-enable an Administrator account; Ability to set the time which is used for time-stamps; Ability to configure the reference identifier for the peer;]."
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#6: This requirement is not being satisfied. The TSS text for FMT_SMF.1 needs to include: A detailed description of how log files are maintained on the TOE, including how changes to storage locations for audit are implemented and configured."
+    },
+    {
+      "SFR": "FMT_SMF.1/MACSEC",
+      "Ans#1: This requirement is not being satisfied. The TSS text for FMT_SMF.1/MACSEC needs to include: Management functions related to MACsec functionality: [Ability of a Security Administrator to: Manage a PSK-based CAK and install it in the device; Manage the key server to create, delete, and activate MKA participants [other management function - CLI commands]; Specify the lifetime of a CAK; Enable, disable, or delete a PSK-based CAK using [other management function - CLI commands]; [selection: No other MACsec management functions].]"
+    },
+    {
+      "SFR": "FMT_SMR.2",
+      "Ans#1: Upon investigation, the evaluator found that the TSS states that: The TOE supports a Security Administrator role, administrable locally or remotely, responsible for provisioning user accounts. Only Security Administrator accounts, associated with the 'security-admin' login class and its requisite permissions, can manage the TOE. User accounts comprise a username, password, and role (privilege). System access via the console or SSHv2 is granted to the administrator only after successful identification and authentication."
+    }
+  ],
+  "Excel": [
+    {
+      "SFR": "FMT_SMF.1",
+      "TSS-requirement": "The evaluator shall confirm that the TSS details which security management functions are available through which interface(s) (local administration interface, remote administration interface)",
+      "Missing Information": "Detailed description of which management functions are available through which interfaces (local administration interface, remote administration interface)"
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "TSS-requirement": "The evaluator shall examine the TSS and the Guidance Documentation to verify they both describe the local administrative interface",
+      "Missing Information": "Detailed description of the local administrative interface used for managing the TOE"
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "TSS-requirement": "For distributed TOEs with the option 'ability to configure the interaction between TOE components' the evaluator shall examine that the ways to configure the interaction between TOE components is detailed in the TSS and the Guidance Documentation",
+      "Missing Information": "Detailed description of the ways to configure the interaction between TOE components, as applicable for distributed TOEs"
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "TSS-requirement": "The evaluator shall check that the TOE behaviour observed during testing of the configured SFRs is as described in the TSS and Guidance Documentation",
+      "Missing Information": "Detailed description of how log files are maintained on the TOE, including how changes to storage locations for audit are implemented and configured"
+    },
+    {
+      "SFR": "FMT_SMF.1/MACSEC",
+      "TSS-requirement": "Management functions related to MACsec functionality: [Ability of a Security Administrator to: Manage a PSK-based CAK and install it in the device; Manage the key server to create, delete, and activate MKA participants [other management function - CLI commands]; Specify the lifetime of a CAK; Enable, disable, or delete a PSK-based CAK using [other management function - CLI commands]; [selection: No other MACsec management functions].]",
+      "Missing Information": "Management functions related to MACsec functionality: [Ability of a Security Administrator to: Manage a PSK-based CAK and install it in the device; Manage the key server to create, delete, and activate MKA participants [other management function - CLI commands]; Specify the lifetime of a CAK; Enable, disable, or delete a PSK-based CAK using [other management function - CLI commands]; [selection: No other MACsec management functions].]"
+    },
+    {
+      "SFR": "FMT_SMR.2",
+      "TSS-requirement": "The evaluator shall examine the TSS to determine that it details the TOE supported roles and any restrictions of the roles involving administration of the TOE (e.g. if local administrators and remote administrators have different privileges or if several types of administrators with different privileges are supported by the TOE)",
+      "Missing Information": "Detailed description of any restrictions of the roles involving administration of the TOE, including differences between local and remote privileges"
+    }
+  ]
+}

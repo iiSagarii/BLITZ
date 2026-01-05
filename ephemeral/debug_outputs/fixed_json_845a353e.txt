@@ -1,0 +1,19 @@
+[
+    {
+        "DOC": [
+            {
+                "SFR": "FPT_SKT_EXT.1",
+                "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE handles zeroization for all CSP, plaintext secret and private cryptographic keys according to Table 19 – Zeroization of Keys and CSP. The TOE does not provide a CLI interface to permit the viewing of keys. Cryptographic keys are protected through the enforcement of kernel-level file access rights, limiting access to the contents of cryptographic key containers to processes with cryptographic rights or shell users with root permission."
+            }
+        ]
+    },
+    {
+        "Excel": [
+            {
+                "SFR name": "FPT_STM_EXT.1",
+                "TSS-requirement": "If ‘obtain time from the underlying virtualization system’ is selected, the evaluator shall examine the TSS to ensure that it identifies the VS interface the TOE uses to obtain time. If there is a delay between updates to the time on the VS and updating the time on the TOE, the TSS shall identify the maximum possible delay.",
+                "Missing information": "The TSS text does not mention virtualization system or any delay between time updates, hence this information is missing."
+            }
+        ]
+    }
+]

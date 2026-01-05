@@ -1,0 +1,43 @@
+{
+  "DOC": [
+    {
+      "SFR": "FCS_CKM.4",
+      "Ans#1": "The TSF stores the following persistent keys on internal Hard Disk Drives in plaintext: HTTPS/TLS Private Host Key – generated using the DRBG and FCS_CKM.1 or entered by the Security Administrator. Syslog/TLS Private Client Key – generated using the DRBG and FCS_CKM.1 or entered by the Security Administrator. The HTTPS/TLS Private Host Key and the Syslog/TLS Private Client key are zeroized from the disk when the Security Administrator deletes the key, replaces the key, or zeroizes the entire TOE. The TSF zeroizes the HTTPS/TLS Private Host Key and the Syslog/TLS Private Client key on the hard disk drives by overwriting the file location with data from /dev/random three times. HTTPS/TLS keys are zeroized from RAM when the HTTP or Syslog process terminates. The TLS Session keys are zeroized from RAM when the associated TLS session is terminated. The DRBG state and all ephemeral keys are zeroized when the TSF is shutdown, suffers loss of power, or restarted."
+    },
+    {
+      "SFR": "FCS_CKM.4",
+      "Ans#2": "The TSF zeroizes the HTTPS/TLS Private Host Key and the Syslog/TLS Private Client key on the hard disk drives by overwriting the file location with data from /dev/random three times."
+    },
+    {
+      "SFR": "FCS_CKM.4",
+      "Ans#3": "The TSF zeroizes the HTTPS/TLS Private Host Key and the Syslog/TLS Private Client key on the hard disk drives by overwriting the file location with data from /dev/random three times."
+    },
+    {
+      "SFR": "FCS_CKM.4",
+      "Ans#4": "The TOE does not store any keys in encrypted form; all keys are stored in plaintext in volatile memory."
+    },
+    {
+      "SFR": "FCS_CKM.4",
+      "Ans#5": "The only situation where the key destruction may be prevented would be if the system suffers a crash or loss of power. This situation only impacts the keys that are stored on the disk. Since the TOE is inaccessible in this situation, administrative zeroization cannot be performed."
+    },
+    {
+      "SFR": "FCS_CKM.4",
+      "Ans#6": "The TSF zeroizes the HTTPS/TLS Private Host Key and the Syslog/TLS Private Client key on the hard disk drives by overwriting the file location with data from /dev/random three times. Each overwrite calls /dev/random ensuring that a different pseudo random pattern is used each time."
+    },
+    {
+      "SFR": "FCS_COP.1/DataEncryption",
+      "Ans#1": "The TOE provides AES encryption/decryption in CBC and GCM modes with 128-bit and 256-bit keys."
+    },
+    {
+      "SFR": "FCS_COP.1/Hash",
+      "Ans#1": "This requirement is not being satisfied. SHA-1, SHA-256, and SHA-384 are used in support of TLS. SHA-256 is used for each executable file to perform the integrity checking and password obfuscation. SHA-512 is not used in TLS but is used solely for verifying the firmware manifest signature."
+    }
+  ],
+  "Excel": [
+    {
+      "SFR": "FCS_COP.1/Hash",
+      "TSS-requirement": "The evaluator shall check that the association of the hash function with other TSF cryptographic functions (for example, the digital signature verification function) is documented in the TSS.",
+      "Missing information": "The TSS text does not explicitly document the association of hash functions (e.g., SHA-1, SHA-256, SHA-384, SHA-512) with other TSF cryptographic functions such as digital signature verification. The TSS should specify how each hash function is used in conjunction with digital signature verification or other cryptographic functions."
+    }
+  ]
+}

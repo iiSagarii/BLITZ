@@ -1,0 +1,46 @@
+[
+  {
+    "DOC": [
+      {
+        "SFR": "FMT_MOF.1/Services",
+        "Ans#1": "Distributed TOEs see Section 2.4.1.1. [CPP_ND_V3.0E-SD].",
+        "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The Security Administrator has the capability to: Start-up and shut-down of the TOE’s audit functions. Start/stop and modify the behaviour of the trusted communication channel to external syslog server. Start/stop and modify the behaviour of the trusted communication channel for remote Administrative sessions (SSH)"
+      }
+    ]
+  },
+  {
+    "Excel": [
+      {
+        "SFR": "FMT_MTD.1/CoreData",
+        "TSS-requirement": "For each administrative function identified in the guidance documentation that is accessible through an interface prior to administrator log-in, the evaluator shall confirm that the TSS details how the ability to manipulate the TSF data through these interfaces is disallowed for non-administrative users.",
+        "Missing Information": "No pre-login interfaces through which non-administrative users can manipulate TSF data."
+      },
+      {
+        "SFR": "FMT_MTD.1/CoreData",
+        "TSS-requirement": "If the TOE supports handling of X.509v3 certificates and implements a trust store, the evaluator shall examine the TSS to determine that it contains sufficient information to describe how the ability to manage the TOE’s trust store is restricted.",
+        "Missing Information": "Information on handling X.509v3 certificates and trust store management."
+      }
+    ]
+  },
+  {
+    "DOC": [
+      {
+        "SFR": "FMT_MTD.1/CoreData",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE restricts the ability to manage the TOE to Security Administrators. Administrative users are required to login before being provided with access to any administrative functions. Non-security administrators are not allowed to modify any TOE functions. No interface is available to an unauthenticated user except the login prompt. Any commands used to modify TOE functions are not made available to non-administrative users and its attempt to use them will result in an invalid action error. The authentication failure parameters can only be configured by the administrator for remote access to the TOE."
+      },
+      {
+        "SFR": "FMT_MTD.1/CoreData",
+        "Ans#2": "Upon investigation, the evaluator found that the TSS states that: <no information provided in the TSS text about X.509v3 certificates or trust store management>"
+      }
+    ]
+  },
+  {
+    "DOC": [
+      {
+        "SFR": "FMT_MTD.1/CryptoKeys",
+        "Ans#1": "For distributed TOEs see Section 2.4.1.1.",
+        "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The Security Administrator can manage the following keys, with the specified operations available: SSH Keys (ECDSA, RSA): Generation, modification, and deletion. Pre-shared CAKs: Configuration (which may include generation, import, modification, and/or deletion depending on the specific implementation)."
+      }
+    ]
+  }
+]

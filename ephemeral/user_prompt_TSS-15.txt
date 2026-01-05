@@ -1,0 +1,58 @@
+SFR statement for FTA_SSL.4:
+FTA_SSL.4.1
+The TSF shall allow user Administrator-initiated termination of the user’s Administrator’s own interactive session.
+
+--------------------
+
+TSS text for FTA_SSL.4:
+User sessions, both remote and local, with the TOE can be terminated by users. The administrative user can logout from the TOE using CLI by typing “logout” to terminate the session. The TOE makes the current contents unreadable after the admin initiates termination. No user activity can take place until the user re-identifies and authenticates.
+
+User sessions, both remote and local, with the TOE can also be terminated due to inactivity (time threshold). Security Administrators can configure this inactivity timer on administrative sessions. Once the set inactivity period is crossed the user would be logged out form the TOE and the session would be terminated. For each user session, the TOE maintains a count of clock cycles (provided by the system clock) since the last user activity. The count is reset each time the user performs any activity within the session. When the counter reaches the number of clock cycles equating to the configured period of inactivity, the user session is locked out.
+
+--------------------
+
+TSS-requirement#1 for FTA_SSL.4: The evaluator shall examine the TSS to determine that it details how the remote administrative session (and if applicable the local administrative session) are terminated.
+Ans#1 for FTA_SSL.4: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FTA_SSL.4 here OR mention what is missing and is to be added into the TSS text for FTA_SSL.4>
+
+================================================================================
+
+SFR statement for FTA_SSL_EXT.1:
+FTA_SSL_EXT.1.1
+The TSF shall, for local interactive sessions, [
+terminate the session]
+after a Security Administrator-specified time period of inactivity.
+
+--------------------
+
+TSS text for FTA_SSL_EXT.1:
+User sessions, both remote and local, with the TOE can be terminated by users. The administrative user can logout from the TOE using CLI by typing “logout” to terminate the session. The TOE makes the current contents unreadable after the admin initiates termination. No user activity can take place until the user re-identifies and authenticates.
+
+User sessions, both remote and local, with the TOE can also be terminated due to inactivity (time threshold). Security Administrators can configure this inactivity timer on administrative sessions. Once the set inactivity period is crossed the user would be logged out form the TOE and the session would be terminated. For each user session, the TOE maintains a count of clock cycles (provided by the system clock) since the last user activity. The count is reset each time the user performs any activity within the session. When the counter reaches the number of clock cycles equating to the configured period of inactivity, the user session is locked out.
+
+--------------------
+
+TSS-requirement#1 for FTA_SSL_EXT.1: The evaluator shall examine the TSS to determine that it details whether local administrative session locking or termination is supported and the related inactivity time period settings.
+Ans#1 for FTA_SSL_EXT.1: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FTA_SSL_EXT.1 here OR mention what is missing and is to be added into the TSS text for FTA_SSL_EXT.1>
+
+================================================================================
+
+SFR statement for FTA_TAB.1:
+FTA_TAB.1.1
+Before establishing a an administrative user session the TSF shall display a Security Administrator-specified advisory notice and consent warning message regarding unauthorised use of the TOE.
+Trusted Path/Channels (FTP)
+
+--------------------
+
+TSS text for FTA_TAB.1:
+The TOE can be accessed for administrative purposes either locally via console or remotely using SSH (CLI). 
+For both local and remote methods of access, the TOE provides an access banner prior to login, with the authentication prompt. These banners can be configured by the security administrator for both local and remote login methods. The banner can provide warnings against unauthorized access to the secure switch as well as any other information that the Security Administrator wishes to communicate.
+
+--------------------
+
+TSS-requirement#1 for FTA_TAB.1: The evaluator shall check the TSS to ensure that it details each administrative method of access (local and/or remote) available to the Security Administrator (e.g., serial port, SSH, HTTPS).
+Ans#1 for FTA_TAB.1: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FTA_TAB.1 here OR mention what is missing and is to be added into the TSS text for FTA_TAB.1>
+TSS-requirement#2 for FTA_TAB.1: The evaluator shall check the TSS to ensure that all administrative methods of access available to the Security Administrator are listed and that the TSS states that the TOE is displaying an advisory notice and a consent warning message for each administrative method of access. The advisory notice and the consent warning message might be different for different administrative methods of access and might be configured during initial configuration (e.g. via configuration file).
+Ans#2 for FTA_TAB.1: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FTA_TAB.1 here OR mention what is missing and is to be added into the TSS text for FTA_TAB.1>
+
+================================================================================
+

@@ -1,0 +1,56 @@
+Final Answer:
+```json
+[
+    {
+        "DOC": [
+            {
+                "SFR": "FPT_TST_EXT.1",
+                "Ans#1": "Upon investigation, the evaluator found that the TSS states that:The TOE runs the following set of self-tests during power on to check the correct operation of the Junos OS firmware: Power on test – determines the boot-device responds, and performs a memory size check to confirm the amount of available memory. File integrity test –verifies integrity of all mounted signed packages, to assert that system files have not been tampered with. To test the integrity of the firmware, the fingerprints of the executables and other immutable files are regenerated and validated against the SHA1 fingerprints contains in the manifest file. Crypto integrity test – checks integrity of major CSPs, such as SSH hostkeys and iked credentials, such as Cas, CERTS, and various keys. Authentication error – verifies that veriexec is enabled and operates as expected using /opt/sbin/kats/cannot-exec.real. Kernel, libmd, OpenSSL, QuickSec, SSH – verifies correct output from known answer tests for appropriate algorithms."
+            },
+            {
+                "SFR": "FPT_TST_EXT.1",
+                "Ans#2": "Upon investigation, the evaluator found that the TSS states that:Successful completion of all the above specified self-tests provides sufficient evidence of correct TSF operation."
+            },
+            {
+                "SFR": "FPT_TST_EXT.1",
+                "Ans#3": "This requirement is not being satisfied. The options for failure responses are not listed in FPT_TST_EXT.1.2;"
+            },
+            {
+                "SFR": "FPT_TST_EXT.1",
+                "Ans#4": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+            },
+            {
+                "SFR": "FPT_TUD_EXT.1",
+                "Ans#1": "Upon investigation, the evaluator found that the TSS states that:Security Administrators are able to query the current version of the TOE firmware using the CLI command “show version”. The TOE does not support delayed activation or partial updates for the TOE. If a new version of the TOE firmware is available an update of the TOE firmware can be initiated. Updates are downloaded and applied manually."
+            },
+            {
+                "SFR": "FPT_TUD_EXT.1",
+                "Ans#2": "Upon investigation, the evaluator found that the TSS states that:The installable firmware package containing the TOE firmware has a digital signature that is checked when the Security Administrator attempts to install the package. If the image fails the signature check, then the image is deleted from the device and no upgrade occurs. Successful update is only initiated when the signature verification of the TOE passes. The TOE does not support automatic updates."
+            },
+            {
+                "SFR": "FPT_TUD_EXT.1",
+                "Ans#3": "This requirement is not being satisfied. The description of the method by which the digital signature is verified is missing from the TSS text. <The method by which the digital signature is verified should be included in the TSS text as per the requirement of FPT_TUD_EXT.1.>"
+            },
+            {
+                "SFR": "FPT_TUD_EXT.1",
+                "Ans#4": "This requirement is not being satisfied. The options for automatic checking for updates or automatic updates are not selected in FPT_TUD_EXT.1.2;"
+            },
+            {
+                "SFR": "FPT_TUD_EXT.1",
+                "Ans#5": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+            },
+            {
+                "SFR": "FTA_SSL.3",
+                "Ans#1": "Upon investigation, the evaluator found that the TSS states that:User sessions, both remote and local, with the TOE can be terminated by users. The administrative user can logout from the TOE using CLI by typing “logout” to terminate the session. The TOE makes the current contents unreadable after the admin initiates termination. No user activity can take place until the user re-identifies and authenticates.User sessions, both remote and local, with the TOE can also be terminated due to inactivity (time threshold). Security Administrators can configure this inactivity timer on administrative sessions. Once the set inactivity period is crossed the user would be logged out form the TOE and the session would be terminated. For each user session, the TOE maintains a count of clock cycles (provided by the system clock) since the last user activity. The count is reset each time the user performs any activity within the session. When the counter reaches the number of clock cycles equating to the configured period of inactivity, the user session is locked out."
+            }
+        ],
+        "Excel": [
+            {
+                "SFR": "FPT_TUD_EXT.1",
+                "TSS-requirement": "TSS-requirement#3 for FPT_TUD_EXT.1",
+                "Missing Information": "The method by which the digital signature is verified is missing."
+            }
+        ]
+    }
+]
+```

@@ -1,0 +1,23 @@
+[
+    {
+        "DOC": [
+            {
+                "SFR": "FTP_ITC.1",
+                "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE supports SSHv2 for trusted channel implementation to syslog server. Additionally, the TOE implements the MACsec protocol for the protection of layer 2 communications between itself and authenticated MACsec peers."
+            },
+            {
+                "SFR": "FTP_ITC.1",
+                "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The SSHv2 protocol ensures that the data transmitted over a SSH session cannot be disclosed or altered by using the encryption and integrity mechanisms of the protocol with the FIPS cryptographic module."
+            },
+            {
+                "SFR": "FTP_TRP.1/Admin",
+                "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE supports remote administration using SSH. A trusted path is provided by the TOE using SSHv2 protocol between itself and remote administrators so that the contents of administrative sessions are protected against unauthorized disclosure or modification."
+            },
+            {
+                "SFR": "FTP_TRP.1/Admin",
+                "Ans#2": "Upon investigation, the evaluator found that the TSS states that: Remote administrators can initiate communication to the TOE’s CLI through the SSH tunnel created by the SSH session. Assured identification is guaranteed by using password or public key-based authentication mechanisms. The SSHv2 protocol ensures that the data transmitted over a SSH session cannot be disclosed or altered by using the encryption and integrity mechanisms of the protocol with the FIPS cryptographic module."
+            }
+        ],
+        "Excel": []
+    }
+]

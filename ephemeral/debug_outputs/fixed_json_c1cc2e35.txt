@@ -1,0 +1,48 @@
+{
+  "DOC": [
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#1": "The TSF allows the Security Administrators to administer the TSF via CLI through a serial cable connected to the TOE and a web GUI over a remote HTTPS channel. The web GUI allows the Security Administrator to perform the following TSF management functions: Ability to administer the TOE remotely; Ability to configure the access banner; Ability to configure the remote session inactivity time before session termination; Ability to update the TOE, and to verify the updates using digital signature capability prior to installing those updates; Ability to configure local audit behaviour (e.g. changes to storage locations for audit; changes to behaviour when local audit storage space is full; changes to local audit storage size); Ability to modify the behaviour of the transmission of audit data to an external IT entity; Ability to manage the cryptographic keys; Ability to configure the cryptographic functionality; Ability to set the time which is used for time-stamps; Ability to manage the TOE’s trust store and designate X509.v3 certificates as trust anchors; Ability to generate Certificate Signing Request (CSR) and process CA certificate response; Ability to administer the TOE locally; Ability to configure the local session inactivity time before session termination or locking; Ability to configure the authentication failure parameters for FIA_AFL.1. The local console allows the Security Administrator to perform the following TSF management functions: Ability to update the TOE, and to verify the updates using digital signature capability prior to installing those updates."
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#2": "The web GUI allows the Security Administrator to perform the following TSF management functions via a remote HTTPS channel. The local console allows the Security Administrator to perform the following TSF management functions via CLI through a serial cable connected to the TOE."
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#3": "The local console allows the Security Administrator to perform the following TSF management functions via CLI through a serial cable connected to the TOE. The administrative interfaces provided by the TSF do not allow any of these functions to be accessed by unauthenticated or unauthorized users."
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#4": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#5": "This requirement is not being satisfied. The TSS does not mention the TOE behaviour observed during testing of the configured SFRs."
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#6": "The TSF implements local logging by maintaining log files of audit records. The logs are stored in a persistent format, ensuring that audit records are preserved across reboots or power cycles. The minimum storage size allocated for audit records is 1 MB."
+    },
+    {
+      "SFR": "FMT_SMR.2",
+      "Ans#1": "This requirement is not being satisfied. The TSS does not mention the Security Administrator role as required by FMT_SMR.2.1. The TSS mentions System Administrator and Read-only-Administrators but does not specify the Security Administrator role."
+    },
+    {
+      "SFR": "FPT_APW_EXT.1",
+      "Ans#1": "The TSF does not store plaintext passwords. The TSF stores the SHA-256 hash of each users’ password. Additionally, the TSF does not provide a user interface to view the password hashes."
+    }
+  ],
+  "Excel": [
+    {
+      "SFR": "FMT_SMF.1",
+      "TSS-requirement": "The evaluator shall check that the TOE behaviour observed during testing of the configured SFRs is as described in the TSS and Guidance Documentation.",
+      "Missing information": "The TSS does not mention the TOE behaviour observed during testing of the configured SFRs."
+    },
+    {
+      "SFR": "FMT_SMR.2",
+      "TSS-requirement": "The evaluator shall examine the TSS to determine that it details the TOE supported roles and any restrictions of the roles involving administration of the TOE (e.g. if local administrators and remote administrators have different privileges or if several types of administrators with different privileges are supported by the TOE).",
+      "Missing information": "The TSS does not mention the Security Administrator role as required by FMT_SMR.2.1."
+    }
+  ]
+}

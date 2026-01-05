@@ -1,0 +1,58 @@
+{
+  "DOC": [
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The available management functions are listed below and these can be accessed via the SSH remotely or locally via console: Ability to administer the TOE remotely; Ability to configure the access banner; Ability to configure the remote session inactivity time before session termination; Ability to update the TOE, and to verify the updates using digital signature capability prior to installing those updates; [Ability to configure local audit behaviour (e.g. changes to storage locations for audit; Ability to configure thresholds for SSH rekeying; Ability to re-enable an Administrator account; Ability to set the time which is used for time-stamps; Ability to configure the reference identifier for the peer;]."
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The available management functions are listed below and these can be accessed via the SSH remotely or locally via console: Ability to administer the TOE remotely; Ability to configure the access banner; Ability to configure the remote session inactivity time before session termination; Ability to update the TOE, and to verify the updates using digital signature capability prior to installing those updates; [Ability to configure local audit behaviour (e.g. changes to storage locations for audit; Ability to configure thresholds for SSH rekeying; Ability to re-enable an Administrator account; Ability to set the time which is used for time-stamps; Ability to configure the reference identifier for the peer;]."
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#3": "This requirement is not being satisfied. The local administrative interface can be accessed via a serial port and is identified with < description of how a local interface in use is identified using appropriate warnings to ensure the interface is local and in TOE logs >."
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#4": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#5": "This requirement is not being satisfied."
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#6": "This requirement is not being satisfied. [Ability to configure local audit behaviour (e.g. changes to storage locations for audit;"
+    },
+    {
+      "SFR": "FMT_SMF.1/MACSEC",
+      "Ans#6": "This requirement is not being satisfied."
+    },
+    {
+      "SFR": "FMT_SMR.2",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE supports a Security Administrator role, administrable locally or remotely, responsible for provisioning user accounts. Only Security Administrator accounts, associated with the 'security-admin' login class and its requisite permissions, can manage the TOE. User accounts comprise a username, password, and role (privilege). System access via the console or SSHv2 is granted to the administrator only after successful identification and authentication."
+    }
+  ],
+  "Excel": [
+    {
+      "SFR Name": "FMT_SMF.1",
+      "TSS-requirement": "TSS-requirement#3 for FMT_SMF.1",
+      "Missing Information": "The local administrative interface can be accessed via a serial port and is identified with < description of how a local interface in use is identified using appropriate warnings to ensure the interface is local and in TOE logs >."
+    },
+    {
+      "SFR Name": "FMT_SMF.1",
+      "TSS-requirement": "TSS-requirement#5 for FMT_SMF.1",
+      "Missing Information": "The evaluator shall check that the TOE behaviour observed during testing of the configured SFRs is as described in the TSS and Guidance Documentation."
+    },
+    {
+      "SFR Name": "FMT_SMF.1",
+      "TSS-requirement": "TSS-requirement#6 for FMT_SMF.1",
+      "Missing Information": "The evaluator shall examine the TSS and Guidance Documentation to ensure that a description of the logging implementation is described in enough detail to determine how log files are maintained on the TOE."
+    },
+    {
+      "SFR Name": "FMT_SMF.1/MACSEC",
+      "TSS-requirement": "TSS-requirement#6 for FMT_SMF.1",
+      "Missing Information": "The evaluator shall examine the TSS and Guidance Documentation to ensure that a description of the logging implementation is described in enough detail to determine how log files are maintained on the TOE."
+    }
+  ]
+}

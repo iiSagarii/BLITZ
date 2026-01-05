@@ -1,0 +1,58 @@
+[
+  {
+    "DOC": [
+      {
+        "SFR": "FMT_SMF.1",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The web GUI allow the Security Administrator to perform the following TSF management functions using the instructions provided in the administrative guide: Ability to administer the TOE remotely; Ability to configure the access banner; Ability to configure the remote session inactivity time before session termination; Ability to update the TOE, and to verify the updates using digital signature capability prior to installing those updates; Ability to configure local audit behaviour (e.g. changes to storage locations for audit; changes to behaviour when local audit storage space is full; changes to local audit storage size); Ability to modify the behaviour of the transmission of audit data to an external IT entity; Ability to manage the cryptographic keys; Ability to configure the cryptographic functionality; Ability to set the time which is used for time-stamps; Ability to manage the TOE’s trust store and designate X509.v3 certificates as trust anchors; Ability to generate Certificate Signing Request (CSR) and process CA certificate response; Ability to administer the TOE locally; Ability to configure the local session inactivity time before session termination or locking; Ability to configure the authentication failure parameters for FIA_AFL.1;"
+      },
+      {
+        "SFR": "FMT_SMF.1",
+        "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The web GUI allow the Security Administrator to perform the following TSF management functions using the instructions provided in the administrative guide: Ability to administer the TOE remotely; Ability to configure the access banner; Ability to configure the remote session inactivity time before session termination; Ability to update the TOE, and to verify the updates using digital signature capability prior to installing those updates; Ability to configure local audit behaviour (e.g. changes to storage locations for audit; changes to behaviour when local audit storage space is full; changes to local audit storage size); Ability to modify the behaviour of the transmission of audit data to an external IT entity; Ability to manage the cryptographic keys; Ability to configure the cryptographic functionality; Ability to set the time which is used for time-stamps; Ability to manage the TOE’s trust store and designate X509.v3 certificates as trust anchors; Ability to generate Certificate Signing Request (CSR) and process CA certificate response; Ability to administer the TOE locally; Ability to configure the local session inactivity time before session termination or locking; Ability to configure the authentication failure parameters for FIA_AFL.1;"
+      },
+      {
+        "SFR": "FMT_SMF.1",
+        "Ans#3": "Upon investigation, the evaluator found that the TSS states that: The local console allows the Security Administrator to perform the following TSF management functions using the instructions provided in the administrative guide: Ability to update the TOE, and to verify the updates using digital signature capability prior to installing those updates;"
+      },
+      {
+        "SFR": "FMT_SMF.1",
+        "Ans#4": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+      },
+      {
+        "SFR": "FMT_SMF.1",
+        "Ans#5": "Upon investigation, the evaluator found that the TSS states that: The TSF implements local logging by maintaining log files of audit records. The logs are stored in a persistent format, ensuring that audit records are preserved across reboots or power cycles. The minimum storage size allocated for audit records is 1 MB;"
+      },
+      {
+        "SFR": "FMT_SMF.1",
+        "Ans#6": "Upon investigation, the evaluator found that the TSS states that: The TSF implements local logging by maintaining log files of audit records. The logs are stored in a persistent format, ensuring that audit records are preserved across reboots or power cycles. The minimum storage size allocated for audit records is 1 MB;"
+      }
+    ],
+    "Excel": [
+      {
+        "SFR": "FMT_SMF.1",
+        "TSS-requirement": "The evaluator shall confirm that the TSS details which security management functions are available through which interface(s) (local administration interface, remote administration interface).",
+        "Missing Information": "Details on which management functions are available through local interfaces other than updates."
+      },
+      {
+        "SFR": "FMT_SMF.1",
+        "TSS-requirement": "The evaluator shall examine the TSS and the Guidance Documentation to verify they both describe the local administrative interface.",
+        "Missing Information": "Comprehensive description of the local administrative interface beyond update functionality."
+      }
+    ]
+  },
+  {
+    "DOC": [
+      {
+        "SFR": "FMT_SMR.2",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The following user roles are supported by the TOE: System Administrator: Who has full read and write access to the administrative interface via both the remote web GUI and local console CLI. Read-only-Administrators: System Administrator can enable these roles whose write access is restricted and can only read web GUI. (In the evaluated configuration, the read-only user does not have access to the local console CLI)"
+      }
+    ]
+  },
+  {
+    "DOC": [
+      {
+        "SFR": "FPT_APW_EXT.1",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF does not store plaintext passwords. The TSF stores the SHA-256 hash of each users’ password. Additionally, the TSF does not provide a user interface to view the password hashes;"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1 @@
+{"DOC": [{"SFR": "FTP_TRP.1/Admin", "Ans#1: The TSF provides a trusted path for remote administration using HTTPs/TLS as described in FCS_HTTPS_EXT.1 and FCS_TLSS_EXT.1 descriptions.", "Ans#2: The TSF provides a trusted path for remote administration using HTTPs/TLS as described in FCS_HTTPS_EXT.1 and FCS_TLSS_EXT.1 descriptions."}], "Excel": []}

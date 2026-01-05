@@ -1,0 +1,67 @@
+[
+  {
+    "DOC": [
+      {
+        "SFR": "FMT_SMF.1",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The available management functions are listed below and these can be accessed via the SSH remotely or locally via console: Ability to administer the TOE remotely; Ability to configure the access banner; Ability to configure the remote session inactivity time before session termination; Ability to update the TOE, and to verify the updates using digital signature capability prior to installing those updates; [Ability to configure local audit behaviour (e.g. changes to storage locations for audit; Ability to configure thresholds for SSH rekeying; Ability to re-enable an Administrator account; Ability to set the time which is used for time-stamps; Ability to configure the reference identifier for the peer;]."
+      },
+      {
+        "SFR": "FMT_SMF.1",
+        "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The available management functions are listed below and these can be accessed via the SSH remotely or locally via console;"
+      },
+      {
+        "SFR": "FMT_SMF.1",
+        "Ans#3": "This requirement is not being satisfied. The local interface can be accessed via a serial port and is identified with < description of how a local interface in use is identified using appropriate warnings to ensure the interface is local and in TOE logs >. This information is missing and needs to be added into the TSS text for FMT_SMF.1."
+      },
+      {
+        "SFR": "FMT_SMF.1",
+        "Ans#4": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+      },
+      {
+        "SFR": "FMT_SMF.1",
+        "Ans#5": "This requirement is not being satisfied. The TSS text for FMT_SMF.1 does not mention anything related to TOE behaviour observed during testing of the configured SFRs."
+      },
+      {
+        "SFR": "FMT_SMF.1",
+        "Ans#6": "This requirement is not being satisfied. The TSS text for FMT_SMF.1 does not mention anything related to logging implementation when local audit is selected."
+      }
+    ],
+    "Excel": [
+      {
+        "SFR": "FMT_SMF.1",
+        "TSS-requirement": "The evaluator shall examine the TSS to determine that it details the TOE supported roles and any restrictions of the roles involving administration of the TOE (e.g. if local administrators and remote administrators have different privileges or if several types of administrators with different privileges are supported by the TOE).",
+        "Missing Information": "Details of restrictions of the roles involving administration of the TOE, such as different privileges for local and remote administrators or different types of administrators with varying privileges."
+      }
+    ]
+  },
+  {
+    "DOC": [
+      {
+        "SFR": "FMT_SMF.1/MACSEC",
+        "Ans#1": "This requirement is not being satisfied. The TSS text for FMT_SMF.1/MACSEC does not mention anything related to the management functions specified in FMT_SMF.1/MACSEC being provided by the TOE."
+      }
+    ],
+    "Excel": [
+      {
+        "SFR": "FMT_SMF.1/MACSEC",
+        "TSS-requirement": "The evaluator shall examine the TSS, the Guidance Documentation and the TOE as observed during all other testing and shall confirm that the management functions specified in FMT_SMF.1 are provided by the TOE.",
+        "Missing Information": "Details on how the TOE maintains the roles and any restrictions of the roles involving administration of the TOE."
+      }
+    ]
+  },
+  {
+    "DOC": [
+      {
+        "SFR": "FMT_SMR.2",
+        "Ans#1": "This requirement is not being satisfied. The TSS text for FMT_SMR.2 does not mention anything related to the roles supported by the TOE and any restrictions of the roles involving administration of the TOE."
+      }
+    ],
+    "Excel": [
+      {
+        "SFR": "FMT_SMR.2",
+        "TSS-requirement": "The evaluator shall examine the TSS to determine that it details the TOE supported roles and any restrictions of the roles involving administration of the TOE (e.g. if local administrators and remote administrators have different privileges or if several types of administrators with different privileges are supported by the TOE).",
+        "Missing Information": "Details on how the TOE maintains the roles and any restrictions of the roles involving administration of the TOE."
+      }
+    ]
+  }
+]

@@ -1,0 +1,67 @@
+[
+    {
+        "Array-1": [
+            {
+                "SFR": "FAU_STG_EXT.1",
+                "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE stores audit logs locally in an audit file. Additionally, syslog can be configured to transmit and store audit data securely via Netconf over SSH. Audit data is transmitted to the configured syslog server in real time."
+            },
+            {
+                "SFR": "FAU_STG_EXT.1",
+                "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The TOE is a standalone TOE that stores audit data locally."
+            },
+            {
+                "SFR": "FAU_STG_EXT.1",
+                "Ans#3": "Upon investigation, the evaluator found that the TSS states that: This information is not provided in the TSS text for FAU_STG_EXT.1, hence this assurance activity is not applicable."
+            },
+            {
+                "SFR": "FAU_STG_EXT.1",
+                "Ans#4": "Upon investigation, the evaluator found that the TSS states that: This information is not provided in the TSS text for FAU_STG_EXT.1, hence this assurance activity is not applicable."
+            },
+            {
+                "SFR": "FAU_STG_EXT.1",
+                "Ans#5": "Upon investigation, the evaluator found that the TSS states that: Audit data is transmitted to the configured syslog server in real time."
+            },
+            {
+                "SFR": "FAU_STG_EXT.1",
+                "Ans#6": "Upon investigation, the evaluator found that the TSS states that: This information is not provided in the TSS text for FAU_STG_EXT.1, hence this assurance activity is not applicable."
+            },
+            {
+                "SFR": "FAU_STG_EXT.1",
+                "Ans#7": "Upon investigation, the evaluator found that the TSS states that: Only authorized Security Administrators are allowed to read, delete, or archive log files. These log files can be accessed using command-line interface (CLI) or via direct filesystem access, but only after successfully authenticating as a Security Administrator."
+            },
+            {
+                "SFR": "FAU_STG_EXT.1",
+                "Ans#8": "Upon investigation, the evaluator found that the TSS states that: The TOE uses an active log file and archive files which are configurable from 1-1000, default being 10. When the active log file reaches its maximum size, it's compressed and archived (logfile.0.gz), and a new active log file is created. Subsequent full active log files shift the archive file numbering (logfile.0.gz becomes logfile.1.gz, etc.)."
+            },
+            {
+                "SFR": "FAU_STG_EXT.1",
+                "Ans#9": "Upon investigation, the evaluator found that the TSS states that: Only authorized Security Administrators are allowed to read, delete, or archive log files. These log files can be accessed using command-line interface (CLI) or via direct filesystem access, but only after successfully authenticating as a Security Administrator."
+            },
+            {
+                "SFR": "FAU_STG_EXT.1",
+                "Ans#10": "Upon investigation, the evaluator found that the TSS states that: The TOE uses an active log file and archive files which are configurable from 1-1000, default being 10. When the active log file reaches its maximum size, it's compressed and archived (logfile.0.gz), and a new active log file is created. Subsequent full active log files shift the archive file numbering (logfile.0.gz becomes logfile.1.gz, etc.)."
+            },
+            {
+                "SFR": "FAU_STG_EXT.1",
+                "Ans#11": "Upon investigation, the evaluator found that the TSS states that: This information is not provided in the TSS text for FAU_STG_EXT.1, hence this assurance activity is not applicable."
+            }
+        ]
+    },
+    {
+        "Array-2": [
+            {
+                "SFR": "FCS_CKM.1",
+                "TSS-requirement": "TSS-requirement#1 for FCS_CKM.1: The evaluator shall ensure that the TSS identifies the key sizes supported by the TOE. If the ST specifies more than one scheme, the evaluator shall examine the TSS to verify that it identifies the usage for each scheme.",
+                "Missing Information": "The TSS text provides the key sizes for RSA, ECDSA, and ECDH but does not explicitly state the usage for each scheme."
+            }
+        ]
+    },
+    {
+        "Array-1": [
+            {
+                "SFR": "FCS_CKM.2",
+                "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE supports several key establishment and key generation schemes. The table below details the same:\n\nThis is the data from a table within the TSS text...\n\nSSH Key generation (ECDH), SSH Key generation (ECDSA), MACsec Key Agreement (MKA), Trusted Update signature verification, and Cryptographic hashing."
+            }
+        ]
+    }
+]

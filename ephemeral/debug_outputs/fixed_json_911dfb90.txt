@@ -1,0 +1,35 @@
+[
+    {
+        "DOC": [
+            {
+                "SFR": "FPT_SKT_EXT.1",
+                "Ans#1": "Upon investigation, the evaluator found that the TSS states that:The TOE handles zeroization for all CSP, plaintext secret and private cryptographic keys according to Table 19 – Zeroization of Keys and CSP. The TOE does not provide a CLI interface to permit the viewing of keys. Cryptographic keys are protected through the enforcement of kernel-level file access rights, limiting access to the contents of cryptographic key containers to processes with cryptographic rights or shell users with root permission."
+            }
+        ],
+        "Excel": []
+    },
+    {
+        "DOC": [
+            {
+                "SFR": "FPT_STM_EXT.1",
+                "Ans#1": "This requirement is not being satisfied. FPT_STM_EXT.1: The TSS text does not list all security functions that make use of time and does not provide a comprehensive description of how time is maintained and considered reliable in the context of each time-related function. The following information should be included in the TSS text to satisfy this requirement: List all security functions that use time and describe how time is maintained and reliable for each function."
+            },
+            {
+                "SFR": "FPT_STM_EXT.1",
+                "Ans#2": "This requirement is not being satisfied. FPT_STM_EXT.1: The TSS text does not identify the VS interface the TOE uses to obtain time or the maximum possible delay between VS time updates and TOE time updates. The following information should be included in the TSS text to satisfy this requirement: Identify the VS interface used and the maximum delay between updates."
+            }
+        ],
+        "Excel": [
+            {
+                "SFR": "FPT_STM_EXT.1",
+                "TSS-requirement": "The evaluator shall examine the TSS to ensure that it lists each security function that makes use of time, and that it provides a description of how the time is maintained and considered reliable in the context of each of the time related functions.",
+                "Missing Information": "The TSS text does not list all security functions that make use of time and does not provide a comprehensive description of how time is maintained and considered reliable in the context of each time-related function."
+            },
+            {
+                "SFR": "FPT_STM_EXT.1",
+                "TSS-requirement": "If “obtain time from the underlying virtualization system” is selected, the evaluator shall examine the TSS to ensure that it identifies the VS interface the TOE uses to obtain time. If there is a delay between updates to the time on the VS and updating the time on the TOE, the TSS shall identify the maximum possible delay.",
+                "Missing Information": "The TSS text does not identify the VS interface the TOE uses to obtain time or the maximum possible delay between VS time updates and TOE time updates."
+            }
+        ]
+    }
+]

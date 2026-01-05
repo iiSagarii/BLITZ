@@ -1,0 +1,83 @@
+SFR statement for FPT_SKP_EXT.1:
+FPT_SKP_EXT.1.1
+The TSF shall prevent reading of all pre-shared keys, symmetric keys, and private keys.
+
+--------------------
+
+TSS text for FPT_SKP_EXT.1:
+The TSF stores symmetric keys, and private keys in plaintext on the hard disk; however, it does not provide an interface to allow any user to view any of these values.
+
+--------------------
+
+TSS-requirement#1 for FPT_SKT_EXT.1: The evaluator shall examine the TSS to determine that it details how any pre-shared keys, symmetric keys, and private keys are stored and that they are unable to be viewed through an interface designed specifically for that purpose, as outlined in the application note. If these values are not stored in plaintext, the TSS shall describe how they are protected/obscured.
+Ans#1 for FPT_SKT_EXT.1: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FPT_SKT_EXT.1 here OR mention what is missing and is to be added into the TSS text for FPT_SKT_EXT.1>
+
+================================================================================
+
+SFR statement for FPT_STM_EXT.1:
+FPT_STM_EXT.1.1
+The TSF shall be able to provide reliable time stamps for its own use.
+FPT_STM_EXT.1.2
+The TSF shall [allow the Security Administrator to set the time].
+
+--------------------
+
+TSS text for FPT_STM_EXT.1:
+The TOE time function is reliant on the system clock provided by the underlying hardware. TOE depends on time and date information provided by a local real-time clock that is manually managed by the Security Administrator on a timely basis, in accordance with the organization’s policy. The TSF uses the system time to timestamp audit log records, to determine user session timeouts, and to determine certificate validity. These uses of time do not require an accuracy finer than one second, and the frequency of updating the time keeps the clock drifting under one second.
+
+--------------------
+
+TSS-requirement#1 for FPT_STM_EXT.1: The evaluator shall examine the TSS to ensure that it lists each security function that makes use of time, and that it provides a description of how the time is maintained and considered reliable in the context of each of the time related functions.
+Ans#1 for FPT_STM_EXT.1: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FPT_STM_EXT.1 here OR mention what is missing and is to be added into the TSS text for FPT_STM_EXT.1>
+TSS-requirement#2 for FPT_STM_EXT.1: If “obtain time from the underlying virtualization system” is selected, the evaluator shall examine the TSS to ensure that it identifies the VS interface the TOE uses to obtain time. If there is a delay between updates to the time on the VS and updating the time on the TOE, the TSS shall identify the maximum possible delay.
+Ans#2 for FPT_STM_EXT.1: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FPT_STM_EXT.1 here OR mention what is missing and is to be added into the TSS text for FPT_STM_EXT.1>
+
+================================================================================
+
+SFR statement for FPT_TST_EXT.1:
+FPT_TST_EXT.1.1
+The TSF shall run a suite of the following self-tests
+During initial start-up (on power on) to verify the integrity of the TOE firmware and software;
+Prior to providing any cryptographic service and [at no other time] to verify correct operation of cryptographic implementation necessary to fulfil the TSF;
+[no other] self-tests
+to demonstrate the correct operation of the TSF.
+
+Application Note: This SFR has been updated as per TD0836.
+FPT_TST_EXT.1.2
+The TSF shall respond to [[Integrity check failure, Cryptographic failure]] by [[for an integrity check failure, the device lets the admin choose to stop or continue booting, for a FIPS cryptographic failure, the device will not boot]].
+
+--------------------
+
+TSS text for FPT_TST_EXT.1:
+The TSF performs the following hardware self-tests at power-on:
+Cryptographic library tests:
+HMAC-SHA-256 integrity check of the library
+HMAC-SHA-1 KAT
+HMAC-SHA-256 KAT
+HMAC-SHA-384 KAT
+AES 128 ECB Encrypt and Decrypt KAT
+AES 256 GCM Encrypt and Decrypt KAT
+RSA 2048 SHA-256 Sign and Verify KAT
+ECDSA P-224 SHA-512 Sign and Verify PCT
+DRBG AES-CTR-256 KAT (invoking the instantiate, reseed, and generate functions)
+Firmware checks:
+SHA-512 digital signature verification of the manifest file.
+SHA-256 integrity check of each executable file in the TSF using the pre-calculated hashes from the manifest file.
+The Cryptographic library test and the Firmware checks provide a high level of assurance that the firmware has not been tampered with and that the cryptographic algorithms are working properly. The Cryptographic library tests verify that each cryptographic algorithm specified in FCS_COP.1 requirements is passing a KAT. The KAT demonstrates that the algorithm is functioning properly by invoking the algorithm with hard coded keys and messages and comparing the result to a pre-computed, known to be correct value. The ECDSA PCT shows that the ECDSA algorithm is functioning properly by signing a known value with a known key and verifying that verifying the computed signature indicates that the signature is valid.
+Successful completion of the device startup indicates that all required power-on self-tests have run and passed without error. These include the Known Answer Tests for AES, HMAC, SHA, DRBG, and RSA, as well as the Pairwise Consistency Test for ECDSA.
+If the cryptographic library tests fail, the TSF will not start up. If an integrity check fails, the TSF will let the admin choose between Reboot, Rollback, or Continue Booting.
+The TOE is delivered as a single package containing both firmware (IVE OS, bootloaders, kernel) and ICS application software for administrative access and system configuration.
+
+--------------------
+
+TSS-requirement#1 for FPT_TST_EXT.1: The evaluator shall examine the TSS to ensure that it details each of the self-tests that are identified by the SFR; this description should include an outline of what the tests are actually doing (e.g., rather than saying "memory is tested", a description similar to "memory is tested by writing a value to each memory location and reading it back to ensure it is identical to what was written" shall be used).
+Ans#1 for FPT_TST_EXT.1: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FPT_TST_EXT.1 here OR mention what is missing and is to be added into the TSS text for FPT_TST_EXT.1>
+TSS-requirement#2 for FPT_TST_EXT.1: The evaluator shall ensure that the TSS makes an argument that the tests are sufficient to demonstrate that the TSF is operating correctly.
+Ans#2 for FPT_TST_EXT.1: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FPT_TST_EXT.1 here OR mention what is missing and is to be added into the TSS text for FPT_TST_EXT.1>
+TSS-requirement#3 for FPT_TST_EXT.1: If more than one failure response is listed in FPT_TST_EXT.1.2, the evaluator shall examine the TSS to ensure it clarifies which response is associated with which type of failure.
+Ans#3 for FPT_TST_EXT.1: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FPT_TST_EXT.1 here OR mention what is missing and is to be added into the TSS text for FPT_TST_EXT.1>
+TSS-requirement#4 for FPT_TST_EXT.1 (for DISTRIBUTED TOE): For distributed TOEs the evaluator shall examine the TSS to ensure that it details which TOE component performs which self-tests and when these self-tests are run. The evaluator shall also examine the TSS to ensure it describes how the TOE reacts if one or more TOE components fail self-testing (e.g. halting and displaying an error message; failover behaviour).
+Ans#4 for FPT_TST_EXT.1 (for DISTRIBUTED TOE): Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FPT_TST_EXT.1 here OR mention what is missing and is to be added into the TSS text for FPT_TST _EXT.1>
+
+================================================================================
+

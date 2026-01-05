@@ -1,0 +1,54 @@
+**JSON Output:**
+
+```json
+{
+  "Array-1": [
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The available management functions are listed below and these can be accessed via the SSH remotely or locally via console: Ability to administer the TOE remotely; Ability to configure the access banner; Ability to configure the remote session inactivity time before session termination; Ability to update the TOE, and to verify the updates using digital signature capability prior to installing those updates; [Ability to configure local audit behaviour (e.g. changes to storage locations for audit; Ability to configure thresholds for SSH rekeying; Ability to re-enable an Administrator account; Ability to set the time which is used for time-stamps; Ability to configure the reference identifier for the peer;]."
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The available management functions are listed below and these can be accessed via the SSH remotely or locally via console: Ability to administer the TOE remotely;"
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#3": "This requirement is not being satisfied. The TSS should describe the local administrative interface in more detail as per FMT_SMF.1."
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#4": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#5": "Upon investigation, the evaluator found that the TSS states that: The available management functions are listed below and these can be accessed via the SSH remotely or locally via console: Ability to administer the TOE remotely;"
+    },
+    {
+      "SFR": "FMT_SMF.1",
+      "Ans#6": "This requirement is not being satisfied. The TSS does not describe the logging implementation for configure local audit behaviour as per FMT_SMF.1."
+    }
+  ],
+  "Excel": [
+    {
+      "SFR Name": "FMT_SMF.1",
+      "TSS-requirement": "The evaluator shall examine the TSS and the Guidance Documentation to ensure that a description of the logging implementation is described in enough detail to determine how log files are maintained on the TOE.",
+      "Missing Information": "The TSS does not describe the logging implementation for configure local audit behaviour."
+    },
+    {
+      "SFR Name": "FMT_SMF.1",
+      "TSS-requirement": "The evaluator shall confirm that the TSS details which security management functions are available through which interface(s) (local administration interface, remote administration interface).",
+      "Missing Information": "The local interface section is sparse and lacks detailed description, which should include appropriate warnings."
+    },
+    {
+      "SFR Name": "FMT_SMF.1/MACSEC",
+      "TSS-requirement": "The evaluator shall examine the TSS to determine that it details the ways to configure the interaction between TOE components.",
+      "Missing Information": "The TSS does not describe the interaction between TOE components."
+    },
+    {
+      "SFR Name": "FMT_SMF.1/MACSEC",
+      "TSS-requirement": "The evaluator shall examine the TSS to ensure that it details the logging implementation for management functions related to MACsec functionality.",
+      "Missing Information": "The TSS does not describe the logging implementation for MACsec management functions."
+    }
+  ]
+}
+```

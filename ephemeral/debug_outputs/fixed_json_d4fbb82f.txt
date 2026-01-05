@@ -1,0 +1,44 @@
+{
+  "DOC": [
+    {
+      "SFR": "FIA_UAU.7",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: When the user is entering their password over the local console, the TSF does not echo any characters back."
+    },
+    {
+      "SFR": "FIA_UIA_EXT.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF utilizes HTTPS, which operates over the TLS protocol (supporting TLSv1.2 and TLSv1.3), to secure a remote administration web GUI session. When connecting over HTTPS, the TSF presents Security Administrators with a username and password prompt; The Security Administrator using password authentication is considered authenticated if the username and the SHA-256 hash of the password matches the stored username and SHA-256 password hash. A successful authentication takes the user to the System Status page. The TSF utilizes a local serial CLI which presents Security Administrators with a username and password prompt. The Security Administrator is considered authenticated if the username and password provided match the credentials configured in the TSF. A successful login takes the user to the CLI menu. Prior to successful identification and authentication, the TSF displays the TOE access banner specified in FTA_TAB.1 and responds to ICMP Echo messages with ICMP Echo Reply messages for both the remote web GUI and the local console CLI."
+    },
+    {
+      "SFR": "FIA_UIA_EXT.1",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: Prior to successful identification and authentication, the TSF displays the TOE access banner specified in FTA_TAB.1 and responds to ICMP Echo messages with ICMP Echo Reply messages for both the remote web GUI and the local console CLI."
+    },
+    {
+      "SFR": "FIA_UIA_EXT.1",
+      "Ans#3 (DISTRIBUTED TOE)": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FIA_UIA_EXT.1",
+      "Ans#4 (DISTRIBUTED TOE)": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FIA_X509_EXT.1/Rev",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: When a certificate is used (to identify the TSF or identify an external entity to the TSF), the TSF verifies certificates by checking the following: The current date between the “Valid from” and “Valid to” dates. The certificate is not listed on the CRL. If the TSF has a cached response that has not expired, the TSF uses the cached response in lieu of querying the CRL server. The certificate chain is valid if: Each certificate in the certificate chain passes the checks described in #1 and #2. Each certificate (other than the first certificate) in the certificate chain has the Subject Type=CA flag set. Each certificate is signed by: a certificate in the certificate chain, or a trusted root CA that has been installed in the TSF. The rules for extendedKeyUsage fields are followed in all instances; Server Authentication purpose is checked for all presented Server certificates. X.509 certificates are not used for trusted updates."
+    },
+    {
+      "SFR": "FIA_X509_EXT.1/Rev",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: During authentication, the TOE performs revocation checking only on the leaf certificate, regardless of whether a full certificate chain or only the leaf certificate is presented. No different handling is applied based on the structure of the certificate chain."
+    }
+  ],
+  "Excel": [
+    {
+      "SFR name": "FIA_X509_EXT.1/Rev",
+      "Corresponding TSS-requirement": "TSS-requirement#1 for FIA_X509_EXT.1/REV",
+      "Missing information in the TSS text as per the requirement statement": "The TSS does not explicitly state that the TSF does not support the Code Signing purpose (id-kp 3 with OID 1.3.6.1.5.5.7.3.3) in the extendedKeyUsage field for trusted updates, as required by FIA_X509_EXT.1.1/Rev. This rule is not supported by the TOE, and the TSS should identify this."
+    },
+    {
+      "SFR name": "FIA_X509_EXT.1/Rev",
+      "Corresponding TSS-requirement": "TSS-requirement#2 for FIA_X509_EXT.1/REV",
+      "Missing information in the TSS text as per the requirement statement": "The TSS does not mention revocation checking for trusted updates (if selected), as required by the TSS-requirement. The TSS should clarify that revocation checking is not performed for trusted updates since X.509 certificates are not used for this purpose."
+    }
+  ]
+}

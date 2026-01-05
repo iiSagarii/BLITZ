@@ -1,0 +1,25 @@
+{
+  "DOC": [
+    {
+      "SFR": "FMT_MOF.1/ManualUpdate",
+      "Ans#1": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+    },
+    {
+      "SFR": "FMT_MTD.1/CoreData",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The only functions accessible prior to authentication are the display of the configurable warning and consent banner and the automated response to ICMP echo messages with ICMP echo reply messages. No management of TSF data can be performed through any interface prior to login. Only administrators can login to the administrative interface, ensuring that access to TSF data is disallowed for non-administrative users.",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The TOE provides a trust store to handle the X.509v3 certificates. The permissions on the trust store restrict access so that only Security Administrator users can import or delete certificates from the trust store. Security Administrator users can also view the certificates stored in the trust store. Non Security Administrator users can only view the certificates but cannot import or delete them."
+    },
+    {
+      "SFR": "FMT_MTD.1/CryptoKeys",
+      "Ans#1": "The TOE is not a distributed TOE; hence this assurance activity is not applicable.",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The TOE restricts the ability to manage configured X.509 certificates (public and private key pairs) to security administrators via GUI. The Security Administrator can generate and delete the cryptographic keys associated with CSRs as follows: For Client Authentication certificates, the administrator navigates to System > Configuration > Certificates > Client Auth Certificates, where options are available to generate a CSR and delete an existing CSR. These actions respectively generate or delete the associated cryptographic key pair. For Device certificates, the administrator navigates to System > Configuration > Certificates > Device Certificates, where similar options exist to generate or delete a CSR, with the corresponding generation or deletion of the associated cryptographic keys."
+    }
+  ],
+  "Excel": [
+    {
+      "SFR": "FMT_MTD.1/CryptoKeys",
+      "TSS-requirement": "For non-distributed TOEs, the evaluator shall ensure the TSS lists the keys the Security Administrator is able to manage to include the options available (e.g. generating keys, importing keys, modifying keys or deleting keys) and how that how those operations are performed.",
+      "Missing information": "The TSS text does not mention the ability to import or modify cryptographic keys, which are required to be listed as per the TSS-requirement."
+    }
+  ]
+}

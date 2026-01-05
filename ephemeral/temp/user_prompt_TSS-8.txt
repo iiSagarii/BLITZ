@@ -1,0 +1,87 @@
+SFR statement for FIA_X509_EXT.2:
+FIA_X509_EXT.2.1
+The TSF shall use X.509v3 certificates as defined by RFC 5280 to support authentication for [HTTPS, TLS] and [no additional uses].
+FIA_X509_EXT.2.2
+When the TSF cannot establish a connection to determine the validity of a certificate, the TSF shall [accept the certificate].
+
+--------------------
+
+TSS text for FIA_X509_EXT.2:
+When establishing a connection to the Syslog server, the TSF uses the certificate presented by the Syslog server to verify the server’s identity. The TSF establishes reference identifiers for the remote server as follows:
+When the server is specified using a domain name, the TSF verifies that the domain name matches a Subject Alternative Name DNS Name field in the certificate using exact or wildcard matching specified in Section 3.1 of RFC 2818. If the certificate does not contain any Subject Alternative Name fields, the TSF matches the domain name against the Common Name in the certificate.
+When the server is specified using an IP address, the TSF verifies that the IP address exactly matches a Subject Alterative Name IP Address field in the certificate using the rules specified in Section 3.1 of RFC 2818. If the certificate does not contain any Subject Alternative Name fields, the TSF matches the IP address against the Common Name in the certificate.
+Once the TSF has verified that the certificate identifiers are valid for the Syslog server, the TSF verifies the validity of the certificate as described in FIA_X509_EXT.1/Rev.
+The TSF presents its own certificate to the Syslog server. This certificate is configured specifically for authentication to the Syslog server by the Security Administrator.
+If the TSF cannot contact the CRL server or the server does not respond, the TSF logs the failure and considers the certificate valid. If any of the other FIA_X509_EXT.1/Rev validity checks fail, the TSF rejects the certificate and does not establish the connection.
+
+--------------------
+
+TSS-requirement#1 for FIA_X509_EXT.2: The evaluator shall check the TSS to ensure that it describes how the TOE chooses which certificates to use, and any necessary instructions in the administrative guidance for configuring the operating environment so that the TOE can use the certificates.
+Ans#1 for FIA_X509_EXT.2: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FIA_X509_EXT.2 here OR mention what is missing and is to be added into the TSS text for FIA_X509_EXT.2>
+TSS-requirement#2 for FIA_X509_EXT.2: The evaluator shall examine the TSS to confirm that it describes the behaviour of the TOE when a connection cannot be established during the validity check of a certificate used in establishing a trusted channel.
+Ans#2 for FIA_X509_EXT.2: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FIA_X509_EXT.2 here OR mention what is missing and is to be added into the TSS text for FIA_X509_EXT.2>
+TSS-requirement#3 for FIA_X509_EXT.2: The evaluator shall verify that any distinctions between trusted channels are described. If the requirement that the administrator is able to specify the default action, then the evaluator shall ensure that the guidance documentation contains instructions on how this configuration action is performed.
+Ans#3 for FIA_X509_EXT.2: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FIA_X509_EXT.2 here OR mention what is missing and is to be added into the TSS text for FIA_X509_EXT.2>
+
+================================================================================
+
+SFR statement for FIA_X509_EXT.3:
+FIA_X509_EXT.3.1
+The TSF shall generate a Certificate Request as specified by RFC 2986 and be able to provide the following information in the request: public key and [Common Name, Organization, Organizational Unit, Country].
+FIA_X509_EXT.3.2
+The TSF shall validate the chain of certificates from the Root CA upon receiving the CA Certificate Response.
+Security Management (FMT)
+
+--------------------
+
+TSS text for FIA_X509_EXT.3:
+The TSF allows Security Administrators to generate Certificate Signing Requests. The TSF requires the Security Administrator to specify the following values:
+Common Name
+Organization
+Locality
+State
+Country
+Key Type (RSA or ECDSA)
+Key Length (2048, 3072, 4096, P-256, P-384, P-521)
+The TSF allows the Security Administrator to specify an Organization Unit and additional random data used when generating the key pair. This information is optional for creating Certificate Signing Requests.
+
+--------------------
+
+TSS-requirement#1 for FIA_X509_EXT.3: If the ST author selects "device-specific information", the evaluator shall verify that the TSS contains a description of the device-specific fields used in certificate requests.
+Ans#1 for FIA_X509_EXT.3: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FIA_X509_EXT.3 here OR mention what is missing and is to be added into the TSS text for FIA_X509_EXT.3>
+
+================================================================================
+
+SFR statement for FMT_MOF.1/Functions:
+FMT_MOF.1.1/Functions
+The TSF shall restrict the ability to [determine the behaviour of, modify the behaviour of] the functions [ transmission of audit data to an external IT entity, handling of audit data] to Security Administrators.
+
+--------------------
+
+TSS text for FMT_MOF.1/Functions:
+The TSF implements the Security Administrator role to authorized administrators of the TOE. The TSF allows the Security Administrators to administer the TSF via CLI through a serial cabled connected to the TOE and a web UI over a remote HTTPS channel. The TSF permissions restrict access to these management functions to users that have been identified, authenticated, and authorized with the Security Administrator role. The web UI and local console allow the Security Administrator to perform the following TSF management functions:
+Verify/Install Firmware Updates
+View/Edit settings for sending audit data to the Syslog Server
+View/Edit the amount of space allocated Local Audit storage
+Clear/Delete Local Audit records
+View/Edit enabled TLS versions
+View/Edit enabled TLS ciphersuties
+View/Edit X.509 Certificates
+Generate and configure cryptographic keys used to identify the TOE
+Configure cryptographic keys used to authenticate users
+View/Edit the TOE access banner
+View/Edit the session inactivity timeout
+View/Edit authentication failure parameters
+Set user account passwords
+Modify system time
+The administrative interfaces provided by the TSF do not allow any of these functions to be accessed by unauthenticated or unauthorized users.
+The TOE provides a trust store to store certificates. The permissions on the trust store restrict access so that only Security Administrators can import or delete certificates from the trust store. Security Administrators can also view the certificates stored in the trust store. No other access to the trust store is allowed.
+
+--------------------
+
+Ans#1 for FMT_MOF.1/Functions: For distributed TOEs see Section 2.4.1.1. [CPP_ND_V3.0E-SD].
+TSS-requirement#2 for FMT_MOF.1/Functions: For non-distributed TOEs, the evaluator shall ensure the TSS for each administrative function identified the TSS details how the Security Administrator determines or modifies the behaviour of (whichever is supported by the TOE) transmitting audit data to an external IT entity, handling of audit data, audit functionality when Local Audit Storage Space is full (whichever is supported by the TOE).
+Ans#2 for FMT_MOF.1/Functions: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FMT_MOF.1/Functions here OR mention what is missing and is to be added into the TSS text for FMT_MOF.1/Functions >
+
+================================================================================
+

@@ -1,0 +1,131 @@
+[
+  {
+    "DOC": [
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE stores audit logs locally in an audit file. Additionally, syslog can be configured to transmit and store audit data securely via Netconf over SSH. Audit data is transmitted to the configured syslog server in real time."
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The TOE stores audit logs locally in an audit file. Additionally, syslog can be configured to transmit and store audit data securely via Netconf over SSH. Audit data is transmitted to the configured syslog server in real time."
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "Ans#3": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "Ans#4": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "Ans#5": "Upon investigation, the evaluator found that the TSS states that: Audit data is transmitted to the configured syslog server in real time."
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "Ans#6": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "Ans#7": "Upon investigation, the evaluator found that the TSS states that: Only authorized Security Administrators are allowed to read, delete, or archive log files. These log files can be accessed using command-line interface (CLI) or via direct filesystem access, but only after successfully authenticating as a Security Administrator."
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "Ans#8": "Upon investigation, the evaluator found that the TSS states that: The TOE stores audit logs locally in an audit file. Additionally, syslog can be configured to transmit and store audit data securely via Netconf over SSH. Audit data is transmitted to the configured syslog server in real time."
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "Ans#9": "Upon investigation, the evaluator found that the TSS states that: Only authorized Security Administrators are allowed to read, delete, or archive log files. These log files can be accessed using command-line interface (CLI) or via direct filesystem access, but only after successfully authenticating as a Security Administrator."
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "Ans#10": "Upon investigation, the evaluator found that the TSS states that: The active log file is compressed and archived when it reaches its maximum size, and the oldest archive log file is purged when the maximum archive file limit is reached."
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "Ans#11": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+      }
+    ]
+  },
+  {
+    "Excel": [
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "TSS-requirement": "The evaluator shall examine the TSS to ensure it describes the means by which the audit data are transferred to the external audit server, and how the trusted channel is provided.",
+        "Missing Information": "None"
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "TSS-requirement": "The evaluator shall examine the TSS to ensure it describes whether the TOE is a standalone TOE that stores audit data locally or a distributed TOE that stores audit data locally on each TOE component or a distributed TOE that contains TOE components that cannot store audit data locally on themselves but need to transfer audit data to other TOE components that can store audit data locally.",
+        "Missing Information": "None"
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "TSS-requirement": "The evaluator shall examine the TSS to ensure that for distributed TOEs it contains a list of TOE components that store audit data locally.",
+        "Missing Information": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "TSS-requirement": "The evaluator shall examine the TSS to ensure that for distributed TOEs that contain components which do not store audit data locally but transmit their generated audit data to other components it contains a mapping between the transmitting and storing TOE components.",
+        "Missing Information": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "TSS-requirement": "The evaluator shall examine the TSS to ensure that it details whether the transmission of audit data to an external IT entity can be done in real-time, periodically, or both. In the case where the TOE is capable of performing transmission periodically, the evaluator shall verify that the TSS provides details about what event stimulates the transmission to be made as well as the possible acceptable frequency for the transfer of audit data.",
+        "Missing Information": "None"
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "TSS-requirement": "For distributed TOEs the evaluator shall examine the TSS to ensure it describes to which TOE components this SFR applies and how audit data transfer to the external audit server is implemented among the different TOE components (e.g. every TOE components does its own transfer or the data is sent to another TOE component for central transfer of all audit events to the external audit server).",
+        "Missing Information": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "TSS-requirement": "The evaluator shall examine the TSS to ensure it describes the amount of audit data that can be stored locally and how these records are protected against unauthorized modification or deletion.",
+        "Missing Information": "None"
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "TSS-requirement": "The evaluator shall examine the TSS to ensure it describes the method implemented for local logging, including format (e.g. buffer, log file, database) and whether the logs are persistent or non-persistent.",
+        "Missing Information": "None"
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "TSS-requirement": "The evaluator shall examine the TSS to ensure it describes the conditions that must be met for authorized deletion of audit records.",
+        "Missing Information": "None"
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "TSS-requirement": "The evaluator shall examine the TSS to ensure it details the behaviour of the TOE when the storage space for audit data is full. When the option ‘overwrite previous audit record’ is selected this description should include an outline of the rule for overwriting audit data. If ‘other actions’ are chosen such as sending the new audit data to an external IT entity, then the related behaviour of the TOE shall also be detailed in the TSS.",
+        "Missing Information": "None"
+      },
+      {
+        "SFR": "FAU_STG_EXT.1",
+        "TSS-requirement": "For distributed TOEs the evaluator shall examine the TSS to ensure it describes which TOE components are storing audit information locally and which components are buffering audit information and forwarding the information to another TOE component for local storage. For every component the TSS shall describe the behaviour when local storage space or buffer space is exhausted.",
+        "Missing Information": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+      }
+    ]
+  },
+  {
+    "DOC": [
+      {
+        "SFR": "FCS_CKM.1",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE uses several cryptographic key generation schemes with different key sizes for each specific operation. The table below details the same: Key Generation Scheme, SFR, Key Size(s), Algorithm, Usage, MACsec SAK, FCS_COP.1/MACSEC, FCS_MKA_EXT.1, 128-bit, 256-bit, AES-CMAC (including AES-KW and AES-CMAC), While using CAK, SSH Key Generation (RSA), FCS_CKM.1, FCS_SSHS_EXT.1, 2048-bit, 4096-bit, RSA, Asymmetric key generation with respective hashing algorithms and curves, SSH Key Generation (ECDH), FCS_CKM.1, FCS_SSHS_EXT.1, P-256, P-384, P-521, ECDH, Asymmetric key generation with respective hashing algorithms and curves, SSH Key Generation (ECDSA), FCS_CKM.1, FCS_SSHS_EXT.1, P-256, P-384, P-521, ECDSA, Asymmetric key generation with respective hashing algorithms and curves, SSH RSA Key Agreement, FCS_CKM.2, 2048-bit, 4096-bit, RSA, For SSH keypair generation, SSH EC Key Agreement, FCS_CKM.2, P-256, P-384, P-521, EC, For SSH keypair generation, ECDSA for Trusted Update Signature Verification, FPT_TUD_EXT.1, P-256, P-384, P-521, ECDSA, For verification of firmware image while update, Password Hashing/Conditioning, FPT_APW_EXT.1, FCS_COP.1/Hash, N/A (Hashing, not Key Generation), HMAC-SHA1, HMAC-SHA2-256, For hashing passwords (password storage)."
+      }
+    ]
+  },
+  {
+    "Excel": []
+  },
+  {
+    "DOC": [
+      {
+        "SFR": "FCS_CKM.2",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE supports several key establishment and key generation schemes. The table below details the same: Scheme, SFR(s), Usage/Service, MACsec AES Data Encryption/Decryption, FCS_COP.1, MACsec data confidentiality, MACsec AES-CMAC Keyed Hashing, FCS_COP.1/CMAC, MACsec data integrity, MACsec Key Agreement (MKA), FCS_MKA_EXT.1, Secure establishment of MACsec SAKs, MACsec Data Encryption and Decryption, FCS_MACSEC_EXT.1, FCS_MACSEC_EXT.2, FCS_MACSEC_EXT.4, MACsec data confidentiality, Random bit generation, FCS_RBG_EXT.1, Used by various cryptographic operations, SSH Key Generation (RSA), FCS_CKM.1, FCS_SSHS_EXT.1, SSH authentication, key exchange, SSH AES Data Encryption/Decryption, FCS_COP.1/DataEncryption, SSH session confidentiality, SSH Hashing, FCS_COP.1/Hash, SSH data integrity, SSH Keyed-hashing, FCS_COP.1/KeyedHash, SSH message authentication, SSH Signature generation and verification (RSA), FCS_COP.1/SigGen, SSH authentication, SSH Signature generation and verification (ECDSA), FCS_COP.1/SigGen, SSH authentication, SSH Key generation (ECDH), FCS_CKM.1, SSH key exchange, SSH RSA Key Agreement, FCS_CKM.2, SSH key exchange, SSH EC Key Agreement, FCS_CKM.2, SSH key exchange, Trusted Update signature verification, FPT_TUD_EXT.1, Verification of software updates, Cryptographic hashing, FCS_COP.1/Hash, FPT_APW_EXT.1, FPT_TST_EXT.1, Password conditioning, password hashing, self-testing (file integrity)."
+      }
+    ]
+  },
+  {
+    "Excel": []
+  }
+]

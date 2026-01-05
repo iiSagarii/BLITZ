@@ -1,0 +1,30 @@
+{
+  "DOC": [
+    {
+      "SFR": "FTA_SSL_EXT.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The Security Administrator can set the TOE so that local and remote sessions are terminated after a Security Administrator-configured period of inactivity."
+    },
+    {
+      "SFR": "FTA_TAB.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF presents the access banner prior to authentication when a user connects to the remote web UI or local console CLI.",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The TSF presents the access banner prior to authentication when a user connects to the remote web UI or local console CLI. This behavior is described in the FIA_UIA_EXT.1, FIA_UAU_EXT.2 description."
+    },
+    {
+      "SFR": "FTP_ITC.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF acts as a client and communicates with the external syslog server using Syslog over TLS. The communication includes authentication, ensuring the integrity and confidentiality of logs transmitted to the syslog server. The TSF implements Syslog over TLS using TLS v1.2 or TLS v1.3, supporting mutual authentication with X.509 certificates. The TSF ensures assured identification of the syslog server by verifying its certificate using domain name or IP address matching, as per RFC 2818.",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The implementation of Syslog over TLS and the associated secure communications are described in more detail in FAU_STG_EXT.1 and FCS_TLSC_EXT.2."
+    }
+  ],
+  "Excel": [
+    {
+      "SFR": "FTA_TAB.1",
+      "TSS-requirement": "The evaluator shall check the TSS to ensure that it details each administrative method of access (local and/or remote) available to the Security Administrator (e.g., serial port, SSH, HTTPS).",
+      "Missing information": "The TSS does not explicitly list all administrative methods of access (e.g., serial port, SSH, HTTPS) but only mentions 'remote web UI' and 'local console CLI'."
+    },
+    {
+      "SFR": "FTA_TAB.1",
+      "TSS-requirement": "The evaluator shall check the TSS to ensure that all administrative methods of access available to the Security Administrator are listed and that the TSS states that the TOE is displaying an advisory notice and a consent warning message for each administrative method of access.",
+      "Missing information": "The TSS does not explicitly confirm that the advisory notice is displayed for all administrative methods of access (e.g., serial port, SSH, HTTPS) but only references 'remote web UI' and 'local console CLI'."
+    }
+  ]
+}

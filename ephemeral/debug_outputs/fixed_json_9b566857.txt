@@ -1,0 +1,73 @@
+[
+  {
+    "DOC": [
+      {
+        "SFR": "FPT_TST_EXT.1",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE runs the following set of self-tests during power on to check the correct operation of the Junos OS firmware: Power on test – determines the boot-device responds, and performs a memory size check to confirm the amount of available memory."
+      },
+      {
+        "SFR": "FPT_TST_EXT.1",
+        "Ans#2": "Upon investigation, the evaluator found that the TSS states that: Successful completion of all the above specified self-tests provides sufficient evidence of correct TSF operation."
+      },
+      {
+        "SFR": "FPT_TST_EXT.1",
+        "Ans#3": "Upon investigation, the evaluator found that the TSS states that: When any self-test fails, the device halts in an error state."
+      },
+      {
+        "SFR": "FPT_TST_EXT.1",
+        "Ans#4": "This requirement is not being satisfied. The evaluator noted that the TSS does not describe which TOE components perform the self-tests and how they react to failures."
+      }
+    ],
+    "Excel": [
+      {
+        "SFR": "FPT_TST_EXT.1",
+        "TSS-requirement": "For distributed TOEs the evaluator shall examine the TSS to ensure that it details which TOE component performs which self-tests and when these self-tests are run. The evaluator shall also examine the TSS to ensure it describes how the TOE reacts if one or more TOE components fail self-testing.",
+        "Missing Information": "Description of which TOE components perform self-tests and their reaction to failures."
+      }
+    ]
+  },
+  {
+    "DOC": [
+      {
+        "SFR": "FPT_TUD_EXT.1",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: Security Administrators are able to query the current version of the TOE firmware using the CLI command 'show version'."
+      },
+      {
+        "SFR": "FPT_TUD_EXT.1",
+        "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The TOE does not support delayed activation or partial updates for the TOE.Updates are downloaded and applied manually. The installable firmware package containing the TOE firmware has a digital signature that is checked when the Security Administrator attempts to install the package."
+      },
+      {
+        "SFR": "FPT_TUD_EXT.1",
+        "Ans#3": "This requirement is not being satisfied. The evaluator noted that the TSS does not describe the method by which digital signatures are verified, including candidate update handling and signature processing for both success and failure."
+      },
+      {
+        "SFR": "FPT_TUD_EXT.1",
+        "Ans#4": "‘Support automatic checking for updates’ or ‘support automatic updates’ is not selected for FPT_TUD_EXT.1 in the ST; hence this assurance activity is not applicable."
+      },
+      {
+        "SFR": "FPT_TUD_EXT.1",
+        "Ans#5": "This requirement is not being satisfied. The evaluator noted that the TSS does not describe update mechanisms for distributed TOE components or how signature verification is performed for individual components."
+      }
+    ],
+    "Excel": [
+      {
+        "SFR": "FPT_TUD_EXT.1",
+        "TSS-requirement": "The evaluator shall verify that the TSS describes the method by which the digital signature is verified to include how the candidate updates are obtained, the processing associated with verifying the digital signature of the update, and the actions that take place for both successful and unsuccessful signature verification.",
+        "Missing Information": "Detailed description of digital signature verification method and processing."
+      },
+      {
+        "SFR": "FPT_TUD_EXT.1",
+        "TSS-requirement": "For distributed TOEs, the evaluator shall examine the TSS to ensure that it describes how all TOE components are updated, that it describes all mechanisms that support continuous proper functioning of the TOE during update (when applying updates separately to individual TOE components) and how verification of the signature or checksum is performed for each TOE component.",
+        "Missing Information": "Description of update mechanisms and signature verification for each TOE component."
+      }
+    ]
+  },
+  {
+    "DOC": [
+      {
+        "SFR": "FTA_SSL.3",
+        "Ans#1": "Upon investigation, the evaluator found that the TSS states that: Security Administrators can configure this inactivity timer on administrative sessions. Once the set inactivity period is crossed the user would be logged out form the TOE and the session would be terminated."
+      }
+    ]
+  }
+]

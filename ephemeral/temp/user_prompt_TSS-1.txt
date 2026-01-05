@@ -1,0 +1,135 @@
+SFR statement for FAU_GEN.1:
+FAU_GEN.1.1
+The TSF shall be able to generate an audit record of the following auditable events:
+Start-up and shut-down of the audit functions;
+All auditable events for the not specified level of audit; and
+All administrative actions comprising:
+Administrative login and logout (name of Administrator shall be logged if individual user accounts are required for Administrators).
+Changes to TSF data related to configuration changes (in addition to the information that a change occurred it shall be logged what has been changed).
+Generating/import of, changing, or deleting of cryptographic keys (in addition to the action itself a unique key name or key reference shall be logged).
+[Resetting passwords (name of related Administrator account shall be logged)];
+Specifically defined auditable events listed in Table 12.
+FAU_GEN.1.2
+The TSF shall record within each audit record at least the following information:
+Date and time of the event, type of event, subject identity (if applicable), and the outcome (success or failure) of the event; and
+For each audit event type, based on the auditable event definitions of the functional components included in the cPP/ST, information specified in column three of Table 12.
+Table  – Security Functional Requirements and Auditable Events
+
+--------------------
+
+TSS text for FAU_GEN.1:
+The TSF generates audit records for the following administrative actions with the administrator role described in the TSS section of FMT_SMR.2:
+Administrative login and logout events
+Changes to TSF data related to configuration changes
+Following cryptographic key operations with a unique key reference/identifier:
+Generation of a CSR and associated keypair
+Importing or deleting a certificate
+Resetting passwords
+Additionally, the TSF generates audit records for the following events:
+Startup and shutdown of the audit function
+Low audit storage space available
+Failure to establish a HTTPS/TLS session
+Failure to establish a TLS session
+Configuration of a new time server
+Removal of configured time server
+All use of the identification and authentication mechanism (local and remote connections to the TSF)
+Unsuccessful attempts to validate a certificate
+Initiation of a software update
+Result of a software update
+Changes to the time
+Modification of the behavior of the TSF
+Failure of self-tests
+Initiation and termination of the trusted channel
+Initiation and termination of the trusted path
+Attempts to unlock an interactive session
+Termination of a session by the session locking mechanism
+‘Trust issue’ with the certificate, e.g. due to failed path
+validation
+Use of an ‘expired certificate’
+Absence of basicConstraints extension
+CA flag not set for a certificate presented as a CA
+Signature validation failure for any certificate in the certificate path; failure to establish revocation status; revoked certificate
+Each audit record includes the date and time, type, subject identity (IP address, hostname, and/or username), the outcome (success or failure), and any additional information specified in column three of Table 12 or in SFR section FAU_GEN.1.1. Certificates are identified in the log by the Certificate DN. All generating/importing of changing or deleting of cryptographic keys relate to certificates. Public keys associated with certificates are identified by the certificate DN and the term ‘public key’.
+
+--------------------
+
+TSS-requirement#1 for FAU_GEN.1: For the administrative task of generating/importing, changing, or deleting of cryptographic keys as defined in FAU_GEN.1.1c, the TSS should identify what information is logged to identify the relevant key.
+Ans#1 for FAU_GEN.1: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FAU_GEN.1 here OR mention what is missing and is to be added into the TSS text for FAU_GEN.1 >.
+TSS-requirement#2 for FAU_GEN.1 (for DISTRIBUTED TOE): For distributed TOEs the evaluator shall examine the TSS and ensure that it describes which of the overall required auditable events defined in FAU_GEN.1.1 are generated and recorded by which TOE components.
+Ans#2 for FAU_GEN.1 (for DISTRIBUTED TOE): Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FAU_GEN.1 here OR mention what is missing and is to be added into the TSS text for FAU_GEN.1 >.
+TSS-requirement#3 for FAU_GEN.1 (for DISTRIBUTED TOE): The evaluator shall ensure that this mapping of audit events to TOE components accounts for, and is consistent with, information provided in Table 1, as well as events in Tables 2, 4, and 5 (where applicable to the overall TOE). This includes that the evaluator shall confirm that all components defined as generating audit information for a particular SFR should also contribute to that SFR as defined in the mapping of SFRs to TOE components, and that the audit records generated by each component cover all the SFRs that it implements.
+Ans#3 for FAU_GEN.1 (for DISTRIBUTED TOE): Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FAU_GEN.1 here OR mention what is missing and is to be added into the TSS text for FAU_GEN.1 >.
+
+================================================================================
+
+SFR statement for FAU_GEN.2:
+FAU_GEN.2.1
+For audit events resulting from actions of identified users, the TSF shall be able to associate each auditable event with the identity of the user that caused the event.
+
+--------------------
+
+TSS text for FAU_GEN.2:
+The TSF generates audit records for the following administrative actions with the administrator role described in the TSS section of FMT_SMR.2:
+Administrative login and logout events
+Changes to TSF data related to configuration changes
+Following cryptographic key operations with a unique key reference/identifier:
+Generation of a CSR and associated keypair
+Importing or deleting a certificate
+Resetting passwords
+Additionally, the TSF generates audit records for the following events:
+Startup and shutdown of the audit function
+Low audit storage space available
+Failure to establish a HTTPS/TLS session
+Failure to establish a TLS session
+Configuration of a new time server
+Removal of configured time server
+All use of the identification and authentication mechanism (local and remote connections to the TSF)
+Unsuccessful attempts to validate a certificate
+Initiation of a software update
+Result of a software update
+Changes to the time
+Modification of the behavior of the TSF
+Failure of self-tests
+Initiation and termination of the trusted channel
+Initiation and termination of the trusted path
+Attempts to unlock an interactive session
+Termination of a session by the session locking mechanism
+‘Trust issue’ with the certificate, e.g. due to failed path
+validation
+Use of an ‘expired certificate’
+Absence of basicConstraints extension
+CA flag not set for a certificate presented as a CA
+Signature validation failure for any certificate in the certificate path; failure to establish revocation status; revoked certificate
+Each audit record includes the date and time, type, subject identity (IP address, hostname, and/or username), the outcome (success or failure), and any additional information specified in column three of Table 12 or in SFR section FAU_GEN.1.1. Certificates are identified in the log by the Certificate DN. All generating/importing of changing or deleting of cryptographic keys relate to certificates. Public keys associated with certificates are identified by the certificate DN and the term ‘public key’.
+
+--------------------
+
+Ans#1 for FAU_GEN.2: The TSS and Guidance Documentation requirements for FAU_GEN.2 are already covered by the TSS and Guidance Documentation requirements for FAU_GEN.1.
+
+================================================================================
+
+SFR statement for FAU_STG.1:
+FAU_STG.1.1
+The TSF shall protect the stored audit records in the audit trail from unauthorized deletion.
+FAU_STG.1.2
+The TSF shall be able to prevent unauthorised modifications to the stored audit records in the audit trail.
+
+--------------------
+
+TSS text for FAU_STG.1:
+The TOE is a standalone TOE. The TOE maintains three separate log files Events, User Access, and Admin Access. By default, the TSF allocates 200 MB to each log file, but the administrator can configure the file size for each log file up to a maximum of 500 MB. The TSF divides the local audit storage between two audit files (active and inactive). When the current audit file reaches capacity; the TSF overwrites the inactive log file (if present). If the inactive log file is not present, then the TOE creates a new log file, switches logging to the new log file, and generates an audit log indicating that a log file reached capacity.
+The TSF protects audit data from unauthorized modification and deletion though the restrictive administrative interfaces. The filesystem of the TSF is not exposed to the administrative user over the HTTPs GUI or the local CLI. The administrative user must be positively identified and authenticated prior to being allowed to clear the local audit log or change audit settings.
+The TSF implements Syslog over TLS using either TLS v1.2 or TLS v1.3. Logs are sent to the Syslog servers in real-time. The logs are also stored locally in case the connection to the remote syslog server cannot be established. The trusted channel with the Syslog server is described in greater detail in the FCS_TLSC_EXT.2 description.
+The TSF implements local logging by maintaining a log file of audit records. The logs are stored in a persistent format, ensuring that audit records are preserved across reboots or power cycles. The minimum configurable storage size that can be allocated for each of the three log files is 1 MB.
+
+--------------------
+
+TSS-requirement#1 for FAU_STG.1: The evaluator shall examine the TSS to ensure it describes the amount of audit data that are stored locally and how these records are protected against unauthorized modification or deletion.
+Ans#1 for FAU_STG.1: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FAU_STG.1 here OR mention what is missing and is to be added into the TSS text for FAU_STG.1>
+TSS-requirement#2 for FAU_STG.1: The evaluator shall ensure that the TSS describes the conditions that must be met for authorized deletion of audit records.
+Ans#2 for FAU_STG.1: Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FAU_STG.1 here OR mention what is missing and is to be added into the TSS text for FAU_STG.1>
+TSS-requirement#3 for FAU_STG.1 (for DISTRIBUTED TOE): For distributed TOEs the evaluator shall examine the TSS to ensure it describes to which TOE components this SFR applies and how local storage is implemented among the different TOE components (e.g. every TOE component does its own local storage or the data is sent to another TOE component for central local storage of all audit events).
+Ans#3 for FAU_STG.1 (for DISTRIBUTED TOE): Upon investigation, the evaluator found that the TSS states that: <paste the exact information from the TSS text for FAU_STG.1 here OR mention what is missing and is to be added into the TSS text for FAU_STG.1>
+
+================================================================================
+

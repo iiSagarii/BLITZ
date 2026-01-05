@@ -1,0 +1,29 @@
+```json
+{
+  "Array-1": [
+    {
+      "SFR": "FPT_RPL.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF shall perform [discarding of the replayed data, logging of the detected replay attempt]."
+    },
+    {
+      "SFR": "FPT_SKP_EXT.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE handles zeroization for all CSP, plaintext secret and private cryptographic keys according to Table 19 – Zeroization of Keys and CSP. The TOE does not provide a CLI interface to permit the viewing of keys. Cryptographic keys are protected through the enforcement of kernel-level file access rights, limiting access to the contents of cryptographic key containers to processes with cryptographic rights or shell users with root permission."
+    },
+    {
+      "SFR": "FPT_STM_EXT.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: All the audit events recorded by TOE are timestamped. The clock function of the TOE provides a source of date and time information for the appliance, used in audit timestamps, which is maintained using the hardware Time Stamp Counter as the clock source. Time on the TOE can only be configured manually by the security administrator."
+    },
+    {
+      "SFR": "FPT_STM_EXT.1",
+      "Ans#2": "This requirement is not being satisfied. <No information provided in the TSS text regarding the use of virtualization system for time synchronization, maximum possible delay for time updates.>"
+    }
+  ],
+  "Excel": [
+    {
+      "SFR": "FPT_STM_EXT.1",
+      "TSS-requirement": "If “obtain time from the underlying virtualization system” is selected, the evaluator shall examine the TSS to ensure that it identifies the VS interface the TOE uses to obtain time. If there is a delay between updates to the time on the VS and updating the time on the TOE, the TSS shall identify the maximum possible delay.",
+      "Missing Information": "No information provided in the TSS text regarding the use of virtualization system for time synchronization, maximum possible delay for time updates."
+    }
+  ]
+}
+```

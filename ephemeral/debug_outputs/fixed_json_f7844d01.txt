@@ -1,0 +1,25 @@
+{
+  "DOC": [
+    {
+      "SFR": "FTA_SSL_EXT.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The Security Administrator can set the TOE so that local and remote sessions are terminated after a Security Administrator-configured period of inactivity. The default inactivity timeout is 10 minutes, and the configurable range is from 5 to 9999999 minutes."
+    },
+    {
+      "SFR": "FTA_TAB.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The remote web GUI is accessed over a secure HTTPS connection using TLSv1.2 or TLSv1.3, while the local console CLI is accessed through a direct serial console connection.",
+      "Ans#2": "This requirement is not being satisfied. FTA_TAB.1: The TSS should state that the TOE is displaying an advisory notice and a consent warning message for each administrative method of access, including the remote web GUI and local console CLI."
+    },
+    {
+      "SFR": "FTP_ITC.1",
+      "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TSF acts as a client and communicates with the external syslog server using Syslog over TLS. The communication includes authentication, ensuring the integrity and confidentiality of logs transmitted to the syslog server. The TSF implements Syslog over TLS using TLS v1.2 or TLS v1.3, supporting mutual authentication with X.509 certificates.",
+      "Ans#2": "Upon investigation, the evaluator found that the TSS states that: The implementation of Syslog over TLS and the associated secure communications are described in more detail in FCS_TLSC_EXT.1 and FCS_TLSC_EXT.2."
+    }
+  ],
+  "Excel": [
+    {
+      "SFR": "FTA_TAB.1",
+      "TSS-requirement": "The evaluator shall check the TSS to ensure that all administrative methods of access available to the Security Administrator are listed and that the TSS states that the TOE is displaying an advisory notice and a consent warning message for each administrative method of access.",
+      "Missing information": "FTA_TAB.1: The TSS should state that the TOE is displaying an advisory notice and a consent warning message for each administrative method of access, including the remote web GUI and local console CLI."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+[
+    {
+        "DOC": [
+            {
+                "SFR": "FAU_GEN.1",
+                "Ans#1": "Upon investigation, the evaluator found that the TSS states that: All generating/importing of changing or deleting of cryptographic keys relate to certificates. Public keys associated with certificates are identified by the certificate CN and the term key size."
+            },
+            {
+                "SFR": "FAU_GEN.1",
+                "Ans#2": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+            },
+            {
+                "SFR": "FAU_GEN.1",
+                "Ans#3": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+            },
+            {
+                "SFR": "FAU_GEN.2",
+                "Ans#1": "The TSS and Guidance Documentation requirements for FAU_GEN.2 are already covered by the TSS and Guidance Documentation requirements for FAU_GEN.1."
+            },
+            {
+                "SFR": "FAU_STG.1",
+                "Ans#1": "Upon investigation, the evaluator found that the TSS states that: The TOE maintains three separate log files locally, namely Events, User Access, and Admin Access. The TSF allocates 200 MB to each log file by default, but the administrator can configure the file size up to a maximum of 1024 MB for hardware platforms and 200 MB for virtual platforms. The TSF protects audit data from unauthorized modification and deletion through restrictive administrative interfaces."
+            },
+            {
+                "SFR": "FAU_STG.1",
+                "Ans#2": "This requirement is not being satisfied. The TSS text does not explicitly state the conditions that must be met for authorized deletion of audit records. The information to be included in the TSS text for FAU_STG.1.1 and FAU_STG.1.2 is: The TSF shall protect stored audit records from unauthorized deletion and prevent unauthorized modifications by implementing specific administrative controls and requiring positive identification and authentication before any modification or deletion of audit records."
+            },
+            {
+                "SFR": "FAU_STG.1",
+                "Ans#3": "The TOE is not a distributed TOE; hence this assurance activity is not applicable."
+            }
+        ],
+        "Excel": [
+            {
+                "SFR": "FAU_STG.1",
+                "TSS-requirement": "The evaluator shall ensure that the TSS describes the conditions that must be met for authorized deletion of audit records.",
+                "Missing Information": "Conditions for authorized deletion of audit records are not explicitly defined in the TSS text."
+            }
+        ]
+    }
+]
